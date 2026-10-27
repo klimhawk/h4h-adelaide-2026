@@ -213,8 +213,9 @@ blockquote {
 .site-footer :focus-visible { outline-color: var(--white); }
 
 @media (max-width: 480px) {
-  .site-nav ul { gap: 0 18px; }
-  .site-nav a { font-size: 16px; }
+  .logo { width: 200px; }
+  .site-nav ul { gap: 0 16px; }
+  .site-nav a { font-size: 16px; padding-inline: 0; }
   .note { padding: 16px 18px; }
   pre { padding: 14px 16px; }
 }
