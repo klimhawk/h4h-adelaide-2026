@@ -22,7 +22,8 @@ needs from here.
 
 ## Questions and updates
 
-Ask on the [chapter Discord](https://discord.com/channels/1462210836675428454/1563874111137120316). Updates before and during the event go there too.
+Ask on the [chapter Discord](https://discord.gg/jDrSg56VJ) (invite link valid until 26 November 2026).
+Updates before and during the event go there too.
 
 ## Licences
 
