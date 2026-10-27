@@ -28,7 +28,7 @@ postcode card. Gemma 4 explains the selected postcode's figures through the Gemi
    `worked-example/data/` into its `data/` folder. See [data.md](data.md) for sources and licences.
 4. Follow [the Gemini API key setup guide](gemini-api-key.md). Copy `sample.env` to `.env` in
    your project folder and replace the placeholder yourself. Never paste the key into CoCo.
-5. Create a `.gitignore` excluding `.env`, `data/`, `.venv/`, `__pycache__/`, `.DS_Store` and any
+5. Create a `.gitignore` excluding `.env`, each Marketplace export by name, `.venv/`, `__pycache__/`, `.DS_Store` and any
    raw build notes. Keep generated Marketplace exports local.
 
 You can ask CoCo to keep local notes of your prompts, queries, results and fixes to help write
@@ -168,7 +168,7 @@ separate from the rebuild instructions.
 ## B8. Package your own project
 
 > Add requirements.txt for the app and an appropriate open-source licence. Ensure .gitignore
-> excludes .env, generated data, .venv/, __pycache__/, .DS_Store and raw build notes. Show the
+> excludes .env, Marketplace exports, .venv/, __pycache__/, .DS_Store and raw build notes. Show the
 > files to include in the repository.
 
 Check that the dependency list is complete, your chosen licence covers your code, and data

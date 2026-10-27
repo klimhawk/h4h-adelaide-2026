@@ -2,8 +2,8 @@
 .env
 *.env
 .streamlit/secrets.toml
-# data you may not publish
-data/
+# data you may not publish: name each Snowflake Marketplace export
+# data/my_marketplace_export.csv
 # Python and tools
 .venv/
 venv/

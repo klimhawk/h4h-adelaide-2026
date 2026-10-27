@@ -20,6 +20,10 @@ needs from here.
   big download (over 300 MB).
 - **One file:** open it, then click the download icon.
 
+## Questions and updates
+
+Ask on the [chapter Discord](https://discord.com/channels/1462210836675428454/1563874111137120316). Updates before and during the event go there too.
+
 ## Licences
 
 - **Our files** (starter files, guides, scripts) are under the MIT licence: see [`LICENSE`](LICENSE).
