@@ -13,7 +13,7 @@ freely.
 | [`requirements.txt`](requirements.txt) | The two Python packages the script needs | `pip install -r requirements.txt` |
 
 **Can't see `.gitignore`?** Files whose names start with a dot are hidden on a Mac. In Finder,
-press Cmd+Shift+. (full stop) to show them. Or make the file yourself: the lines are on the
-GitHub how-to page of the event site.
+press Cmd+Shift+. (full stop) to show them. Or open `.gitignore` here on GitHub, copy its
+lines and make the file yourself.
 
 Make your repo on the day, not before: your project must be built during the event.
