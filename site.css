@@ -237,7 +237,7 @@ blockquote {
 .site-footer :focus-visible { outline-color: var(--white); }
 
 @media (max-width: 480px) {
-  .logo { width: 200px; }
+  .logo { width: 240px; }
   .site-nav ul { gap: 0 16px; }
   .site-nav a { font-size: 16px; padding-inline: 0; }
   .note { padding: 16px 18px; }
