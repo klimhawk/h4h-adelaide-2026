@@ -150,6 +150,30 @@ td.time { font-family: var(--mono); white-space: nowrap; }
 th.col-time { width: 110px; }
 th.col-theme { width: 24%; }
 
+/* Wide tables become one card per row on phones */
+@media (max-width: 600px) {
+  table.stack, table.stack tbody, table.stack tr, table.stack td { display: block; width: 100%; }
+  table.stack thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  table.stack tr { border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+  table.stack tr + tr { margin-top: 12px; }
+  table.stack td { border: 0; border-top: 1px solid var(--rule); padding: 10px 16px; }
+  table.stack td:first-child { border-top: 0; background: var(--head); }
+  table.stack td + td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--green);
+  }
+}
+
 /* Code */
 code {
   font-family: var(--mono);
@@ -217,5 +241,6 @@ blockquote {
   .site-nav ul { gap: 0 16px; }
   .site-nav a { font-size: 16px; padding-inline: 0; }
   .note { padding: 16px 18px; }
+  th, td { padding: 8px 10px; }
   pre { padding: 14px 16px; }
 }
