@@ -6,6 +6,9 @@ MLH on Friday 30 October 2026.
 This repo is not your project. On the day, your team makes its own repo, then copies in what it
 needs from here.
 
+**Too technical?** Give your AI assistant the link to this repo, or to any file in it, and ask it to
+walk you through it.
+
 ## What is in here
 
 | Folder | What it holds |
