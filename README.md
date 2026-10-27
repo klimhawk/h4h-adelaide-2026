@@ -1,7 +1,7 @@
 # Hack for Humanity Adelaide: starter files and data
 
 Starter files and open data for **Hack for Humanity Adelaide**, an MLH Hack Day on
-Friday 30 October 2026, 3 to 8pm, at AI Masters Dojo, Adelaide.
+Friday 30 October 2026.
 
 This repo is not your project. On the day, your team makes its own repo, then copies in what it
 needs from here.
@@ -12,15 +12,13 @@ needs from here.
 | --- | --- |
 | [`starter/`](starter/) | Files for your own repo: a README template, the MIT `LICENSE`, a `.gitignore`, and a short script for your first Gemma call |
 | [`data/`](data/) | Open data about South Australia, by theme, with a guide to each dataset, its source and its licence |
-| [`worked-example/`](worked-example/) | An app we built to test lane 3 (coming soon). Learn from it, but do not submit it or copy its code |
+| [`worked-example/`](worked-example/) | An app we built to test lane 3. Learn from it, but do not submit it or copy its code |
 
 ## Download
 
 - **Everything:** click the green **Code** button, then **Download ZIP**. The data makes this a
   big download (over 300 MB).
 - **One file:** open it, then click the download icon.
-
-The same data is on USB drives at the venue.
 
 ## The event site
 

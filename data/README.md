@@ -4,8 +4,6 @@ Real South Australian open data, already downloaded and checked, so your team sp
 afternoon building, not searching. Everything in this folder is open data you may use in your
 project, as long as you credit the source (see [Credit the source](#credit-the-source)).
 
-The same files are on USB drives at the venue, in the same folders.
-
 ```text
 data/
   1_health/  2_education/  3_sustainability/  4_foundation/   start here
