@@ -199,6 +199,7 @@ li pre { margin: 10px 0; }
 
 /* Callouts and cards */
 .note { background: var(--blue); border-radius: 8px; padding: 20px 24px; }
+.note p + p { margin-top: 10px; }
 blockquote {
   margin: 0;
   background: var(--white);
