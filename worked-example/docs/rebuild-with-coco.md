@@ -1,80 +1,65 @@
 # Rebuild with CoCo
 
-This is the prompt-led design used to build Battery Race: paste one prompt into Cortex Code
-(CoCo), review its work, check the result, then continue. It combines the original data-build
-sequence with the app-specification and documentation continuation used from B6 onward.
-It is adapted for a public reader, not a verbatim transcript. Recorded results and fixes are in
-[how-coco-helped.md](how-coco-helped.md); the SQL and commands are in [rebuild.md](rebuild.md).
+Use this guide to explore how Battery Race was built with Cortex Code (CoCo). Paste one prompt
+at a time, check the result, then continue. You can adapt the same sequence to your own project:
+find data, understand it, prepare it, build an app and check its answers.
 
-**Learn from it, but do not submit it or copy its code.** For the event, build your own team's
-project. These prompts show how this worked example was developed.
+**Learn from it, but do not submit it or copy its code.** Your event project must be your team's
+own work. Battery Race is a worked example to learn from.
+
+For the SQL and commands behind these steps, see [Rebuild from scratch](rebuild.md).
+[How CoCo helped](how-coco-helped.md) describes CoCo's contribution to this example.
 
 ## What you are building
 
-Battery Race asks which South Australian postcodes are leading the home-battery boom since
-July 2025, and how battery uptake relates to area disadvantage. The local Streamlit app has a
-postcode card explained by Gemma, a map, an animated race, a scatter plot and a glossary.
-Gemma receives only the selected postcode's facts through the Gemini API.
-
-The original design targeted 90 minutes of building, with a two-hour stop point. These were
-planning targets, not a measured completion-time claim.
+Battery Race compares home-battery uptake across South Australian postcodes. It combines CER
+installation counts with SEIFA disadvantage deciles and postal-area boundaries from Snowflake
+Marketplace. A local Streamlit app displays a map, an animated race, a scatter plot and a
+postcode card. Gemma 4 explains the selected postcode's figures through the Gemini API.
 
 ## Before the first prompt
 
-- Sign in to your own Snowflake account and confirm CoCo answers a greeting. Stop if access is
-  refused. Check your trial balance and use a warehouse you are authorised to run.
-- Use CoCo Desktop or a local Cortex CLI session with your project folder open for file loading,
-  app building and local tests. Snowsight can help explore data, but cannot read your local CSVs.
-- For a full reconstruction, create a separate empty project folder. Copy in `APP-SPEC.md`, `sample.env` and
-  the two CER source CSVs under `data/`. Keep postcodes as text. The source CSVs are included in
-  this worked example; [data.md](data.md) records their provenance and August 2026 snapshot.
-- Follow [the Gemini API key setup guide](gemini-api-key.md) to create your own key in Google AI
-  Studio and save it as `GEMINI_API_KEY` in `.env` beside `app.py`. Do not paste
-  it into CoCo or a chat. Do not ask an agent to open `.env`, print environment variables or read
-  connection files. Sign in and handle credentials yourself.
-- Before building, create a `.gitignore` covering `.env`, `data/`, `.venv/`, `__pycache__/`,
-  `.DS_Store` and `SESSIONS-LOG.md`. The reconstruction keeps all generated data local. This
-  published worked example separately includes only the CER files permitted for redistribution.
+1. Sign in to Snowflake and confirm CoCo answers a greeting. Check your available credit and
+   select a warehouse. If CoCo is unavailable, resolve access before starting.
+2. Use CoCo Desktop or a local Cortex CLI session with your project folder open for local file
+   loading, app building and tests. Snowsight can help explore data, but cannot read your local CSVs.
+3. To reconstruct this example, create a separate project folder. Copy
+   [APP-SPEC.md](../APP-SPEC.md) and `sample.env` into its root, and the two CER source CSVs from
+   `worked-example/data/` into its `data/` folder. See [data.md](data.md) for sources and licences.
+4. Follow [the Gemini API key setup guide](gemini-api-key.md). Copy `sample.env` to `.env` in
+   your project folder and replace the placeholder yourself. Never paste the key into CoCo.
+5. Create a `.gitignore` excluding `.env`, `data/`, `.venv/`, `__pycache__/`, `.DS_Store` and any
+   raw build notes. Keep generated Marketplace exports local.
 
-Keep a note of elapsed time, each checkpoint, any rephrased prompt, and anything you needed to
-know that CoCo did not explain. Review proposed changes before CoCo makes them.
-
-## D0. Keep a local build record
-
-The documentation design added this prompt so later documentation could be drawn from the work:
-
-> Document every step in SESSIONS-LOG.md in this folder as we go: the goal, what you ran
-> (queries and commands), the result, and any problem and fix. Use placeholders for account,
-> connection and user names. Never copy data rows into it. Never read or print credentials.
-
-**Checkpoint:** the local log grows after each step. Keep it private and out of commits.
+You can ask CoCo to keep local notes of your prompts, queries, results and fixes to help write
+accurate documentation later. Keep credentials and data rows out of those notes.
 
 ## B1. Find the Marketplace data
 
 > Find the free Data Army Intel SEIFA 2021 and Geography boundaries listings for Australia in
 > the Snowflake Marketplace. Tell me what tables each has and whether they are free in my region.
 
-**Your step:** open each listing yourself, check pricing and availability, click Get, and review
-and accept its terms. The original listings were:
+Open the listings in Snowsight. Check pricing and availability in your region, select Get,
+and review and accept the terms yourself.
 
 | Listing | ID | Table needed |
 |---|---|---|
 | ABS Socio-Economic Indexes for Areas (SEIFA 2021) Data - Free | `GZSUZ2MM5HIL` | `SEIFA.SEIFA_POA` |
 | Geography - Boundaries & Insights - Australia | `GZSUZCN9CY` | `GEOGRAPHY_AUS_FREE.ABS_POA_2021_AUST_GDA2020` |
 
-**Checkpoint:** both datasets are available in your account and CoCo can describe the tables.
-In the original run, SEIFA needed a provider sync to the account region: wait for the notification,
-then return and Get it again. Do not assume a listing is currently free or available without checking.
+**Check:** both datasets are available in your account and CoCo can describe the tables.
+If a listing needs a provider sync to your region, wait for the notification, then return to
+complete Get. Confirm the current offer rather than assuming it is free.
 
 ## B2. Understand SEIFA before joining
 
 > Explain SEIFA_POA: what one row is, which index and measure I should use for 'how disadvantaged
 > is this area', and how postal areas are written. Show me South Australian rows only.
 
-**Checkpoint:** CoCo recognises long format: one postal area, index and measure per row. For this
-app, use IRSD, national decile `RWAD`, state decile `RWSD` and population `URP`. National decile
-1 means most disadvantaged, 10 least. Join on the four-character `POA` code. Missing scores stay
-missing. Confirm actual table and column names; the original provider example query was inaccurate.
+**Check:** the table is in long format: one postal area, index and measure per row. For Battery
+Race, use IRSD, national decile `RWAD`, state decile `RWSD` and population `URP`. National decile
+1 means most disadvantaged, 10 least. Join on the four-character `POA` code and retain missing
+scores. Ask CoCo to inspect actual columns before using a provider's example query.
 
 ## B3. Load and reshape the CER files
 
@@ -82,13 +67,13 @@ missing. Confirm actual table and column names; the original provider example qu
 > data/sgu-solar-installations-2011-to-present-and-totals.csv into new tables. Keep postcodes as
 > text. Reshape the months into rows.
 
-**Checkpoint:** raw row counts match the local files; installations are numeric; postcode text
-retains leading zeros. Include the separate historic 2001 to 2010 solar total when calculating
-all-time solar installations. Check monthly sums against the source totals.
+**Check:** raw row counts match the files, installations are numeric and postcode text retains
+leading zeros. Include the separate historic 2001 to 2010 solar total in all-time solar counts.
+Compare monthly sums with the source totals.
 
-For the included snapshot, the recorded raw counts were 2,473 battery rows and 2,811 solar rows;
-the long tables had 34,622 and 528,468 rows. Run SQL statements individually so an earlier failure
-is not hidden by the last result. Use your intended account connection explicitly.
+With the supplied August 2026 snapshot, expect 2,473 raw battery rows and 2,811 raw solar rows;
+the long tables have 34,622 and 528,468 rows. Run SQL statements individually so a later result
+does not hide an earlier failure. Confirm CoCo is using your intended account connection.
 
 ## B4. Join and diagnose missing matches
 
@@ -96,109 +81,100 @@ is not hidden by the last result. Use your intended account connection explicitl
 > decile by postal area. Add batteries per 100 solar homes. Tell me how many postcodes did not
 > match and why.
 
-**Checkpoint:** retain postcodes with missing SEIFA matches. Calculate the rate as 100 times
-batteries divided by solar installations; leave the rate missing if solar is zero. Explain that
-solar installations are not unique homes and that CER postcodes and ABS postal areas differ.
+**Check:** keep postcodes without a SEIFA match. The rate is 100 times batteries divided by
+solar installations; leave it missing where solar is zero. Solar installations are not unique
+homes, and CER postcodes and ABS postal areas are different geographies.
 
-The original result had 347 postcodes: 338 MATCHED, 3 NO_DECILE (5111, 5160, 5950), and
-6 NO_POSTAL_AREA (5001, 5071, 5175, 5207, 5312, 5875). Investigate differences rather than forcing
-new data to match these historical counts.
+The supplied snapshot produces 347 postcodes: 338 MATCHED, 3 NO_DECILE (5111, 5160, 5950), and
+6 NO_POSTAL_AREA (5001, 5071, 5175, 5207, 5312, 5875). If you use newer data, investigate changes
+rather than forcing it to match these counts.
 
 ## B5. Export the local app files
 
 > Save for my app, into the data folder: the joined table as CSV, the monthly SA battery series
 > per postcode as CSV, and the SA postal-area boundaries as simplified GeoJSON.
 
-**Checkpoint:** the files are saved under the names and schema expected by `APP-SPEC.md`:
+**Check:** the files have the exact names and fields expected by
+[APP-SPEC.md](../APP-SPEC.md) and the [export SQL](rebuild.md#6-export-the-app-files):
 
-| File | Contents | Original result |
+| File | Contents | Supplied snapshot |
 |---|---|---|
 | `sa_postcode_battery_seifa.csv` | Postcode, battery and solar totals, rate, national and state deciles, population, match status | 347 rows |
 | `sa_battery_monthly.csv` | `postcode`, `month` (`YYYY-MM`), `installations` | 4,564 rows |
 | `sa_postal_areas_simplified.geojson` | FeatureCollection with `postcode` and `area_sqkm` properties | 341 features |
 
-The original build simplified boundaries to 100 metres. Check valid shapes and keep the GeoJSON
-small enough for the app (the design target was under about 10 MB). Compare totals with the
-source CSVs. Keep the Marketplace-derived exports local; do not publish them.
+Ask CoCo to simplify boundaries to 100 metres, check that shapes remain valid and keep the
+GeoJSON under about 10 MB. Compare exported totals with the source CSVs. Keep the
+Marketplace-derived exports out of your public repository.
 
 ## B6. Build from the app specification
 
 [APP-SPEC.md](../APP-SPEC.md) defines the layout, input files, data rules, Gemma prompt and
-acceptance checks. Make sure it is in the project folder, then paste:
+acceptance checks. Make sure it is in your project folder, then paste:
 
 > Build the app described in APP-SPEC.md in this folder, using the files in data/. Follow its
-> data rules and Gemma section exactly. Then run the acceptance tests in its section 7 yourself,
-> fix what fails (at most two rounds), and report each test as pass or fail with what you saw.
-> Keep logging every step in SESSIONS-LOG.md. Do not open or print .env; let the app load the key.
+> data rules and Gemma section exactly. Run the acceptance tests in section 7, fix failures and
+> report each test as pass or fail with what you observed. Do not open or print .env; let the
+> app load the key.
 
-**Checkpoint:** the app starts, the map and race render, and each acceptance check has evidence.
-Headless tests use a fake Gemma client. Separately check a live answer if your key is configured.
-Allow at most one Gemma call per new postcode; repeated selections should use the session cache.
+**Check:** the app starts, the map and race render, and the checks have evidence. Headless tests
+use a fake Gemma client; also try a real answer in the app. Select the same postcode again to
+confirm it uses the cached answer rather than making another API call.
 
-Follow-up fixes in the original build included Gemma latency and API-error handling. The final
-code uses `thinking_level="minimal"`, and shows a fallback with a Try again button when a call
-fails. See [how-coco-helped.md](how-coco-helped.md#6-building-the-app) for the recorded issues.
+For this Gemma integration, the final example uses `thinking_level="minimal"` to reduce latency,
+and shows a fallback with a Try again button if a request fails. See the
+[recorded implementation fixes](how-coco-helped.md#6-building-the-app) if you encounter similar issues.
 
 ## B6b. Check the result independently
 
-The design used Codex for a separate check after CoCo's own tests. You can give another reviewer
-this prompt, with the reconstructed project folder selected:
+Ask a teammate to check the app against the data, rather than relying only on CoCo's report.
+They can calculate the figures themselves or use a separate coding assistant with this prompt:
 
-> CoCo has built Battery Race and reported its acceptance tests. Check four independently;
-> do not rely on CoCo's report or reuse its code for the reference answers.
+> Check Battery Race independently. Calculate reference answers from data/ without reusing
+> the app's calculation code.
 >
-> 1. A2 Header: compute SA batteries since July 2025, the postcode count and leader from data/.
->    Compare them with the running app.
-> 2. A5 Scatter: check that blank deciles are absent, not plotted at zero, and calculate the
->    averages for deciles 1 to 3 and 8 to 10 independently.
-> 3. A6 Gemma grounding: select the leader and a postcode near the median. Check every number in
->    each answer against the data, and that it names no suburb and gives no advice.
-> 4. A8 No-data postcode: confirm the plain message and that no Gemma call is made for a postcode
->    with no postal area.
+> 1. Header: check SA batteries since July 2025, the postcode count and the leading postcode.
+> 2. Scatter: confirm missing deciles are absent, not plotted at zero. Recalculate the averages
+>    for deciles 1 to 3 and 8 to 10 and compare them with the caption.
+> 3. Gemma: select the leader and a postcode near the median. Check every number in the answers
+>    against the data. Confirm the answers name no suburb and give no advice.
+> 4. Missing data: select a postcode without a postal area. Confirm the app shows an explanation
+>    and makes no Gemma call.
 >
-> Let the app load its key; never open or print .env. Report each check, evidence and any
-> disagreement. End with a focused correction prompt I can paste into CoCo if needed.
+> Never open or print .env. Report the evidence for each check and any corrections needed.
 
-**Checkpoint:** resolve disagreements or document them as known issues.
+**Check:** fix disagreements and document any remaining limitations.
 
-## B7. Generate documentation from the build record
+## B7. Write the project documentation
 
-> Using SESSIONS-LOG.md in this folder as the record of what we did, write the project
-> documentation. Only describe steps that are in the log; where something is unclear, write
-> "not recorded".
+> Using the work completed in this session and any local build notes, write the project
+> documentation. Describe only what we actually did; mark anything unverified clearly.
 >
-> 1. docs/how-coco-helped.md: for finding listings, explaining data, loading and reshaping CSVs,
->    joining, exporting and building the app, give the prompt, what CoCo did, the key query or
->    command, and data traps it flagged.
-> 2. docs/data.md: record each dataset's name, provider, source, licence or terms, tables and
->    columns, join key, match rate and unmatched postcodes with reasons. Clearly mark which files
->    are included and which readers generate themselves. Do not redistribute Marketplace exports.
-> 3. docs/rebuild.md: record the executed steps in order, with queries and commands, ending with
->    how to run the app. Also keep the prompt sequence and checkpoints in docs/rebuild-with-coco.md.
-> 4. README.md: explain the app and Gemma's role, model and licence, data, how CoCo helped, AI tools
->    used, and how to run it. Link the docs and APP-SPEC.md. For Gemma 4 link its Apache 2.0 licence
->    at https://ai.google.dev/gemma/apache_2 and retain the Gemini API terms link.
+> 1. docs/how-coco-helped.md: explain where CoCo helped find, understand and prepare data or
+>    build the app. Include useful prompts, queries, results and fixes as evidence.
+> 2. docs/data.md: list sources, providers, licences or terms, tables, columns, join keys,
+>    match rates and missing matches. Mark which files are included and how to obtain the rest.
+> 3. docs/rebuild.md: explain how to reproduce the project, with queries, commands and run steps.
+> 4. README.md: explain the problem, app, Gemma integration, model and licence, data, CoCo's
+>    contribution, AI tools, tech stack and how to run it. Link the supporting documents and spec.
 >
-> Replace account names, locators, connection names, usernames, emails, keys and tokens with
-> placeholders. Do not copy data rows or private session material into the published documents.
+> Use placeholders for account and connection names. Never include credentials, private
+> identifiers, raw session logs or Marketplace data rows in public documentation.
 
-**Checkpoint:** docs match the work you actually did. Screenshots are optional; inspect any you
-choose to share for private information first. Do not publish the raw session log.
+**Check:** someone unfamiliar with your project can understand what it does, where its data
+comes from, how AI contributes and how to run it. Keep the explanation of CoCo's contribution
+separate from the rebuild instructions.
 
-## B8. Prepare the repository
+## B8. Package your own project
 
-> Add an MIT LICENSE and requirements.txt for the app. Ensure .gitignore excludes .env, data/,
-> .venv/, __pycache__/, .DS_Store and SESSIONS-LOG.md. Show the files that would be committed.
-> Do not commit or publish yet.
+> Add requirements.txt for the app and an appropriate open-source licence. Ensure .gitignore
+> excludes .env, generated data, .venv/, __pycache__/, .DS_Store and raw build notes. Show the
+> files to include in the repository.
 
-**Checkpoint:** inspect the complete file list and scan the proposed public content for private
-identifiers and credentials. Review licences separately for code, model and data. The existing
-participant repository already has a root licence; do not overwrite it when using that repository.
+Check that the dependency list is complete, your chosen licence covers your code, and data
+licences and model terms are documented separately. This example uses the repository's root
+MIT licence and links Gemma 4's Apache 2.0 licence in its README.
 
-## B9. Publish only after your review
-
-Publishing was a separate owner decision in the design. Review the app, documents, licences and
-file list first. Commit and push only when you choose to publish. If uploading through a browser,
-select files individually: browser uploads do not apply `.gitignore` to files you drag in.
-
-Do not publish credentials, Marketplace exports or raw session logs.
+Before uploading, inspect the files for keys, private identifiers and data you cannot
+redistribute. If you upload through a browser, select files carefully: dragging a folder into
+GitHub does not apply your local `.gitignore` rules.
