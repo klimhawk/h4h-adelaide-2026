@@ -1,0 +1,9 @@
+# Generate these from Marketplace listings in your own account; do not redistribute.
+/data/sa_postcode_battery_seifa.csv
+/data/sa_postal_areas_simplified.geojson
+
+# Keep the raw build record private.
+/SESSIONS-LOG.md
+
+# Public template contains a placeholder only.
+!sample.env
