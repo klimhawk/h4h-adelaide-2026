@@ -55,7 +55,7 @@
 <section>
 <h2>1. Get a free API key (3 minutes)</h2>
 <ol>
-<li>Sign in with a Google account at <a href="https://aistudio.google.com">aistudio.google.com</a> and choose <strong>Create API key</strong> (direct link: <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>).</li>
+<li>Sign in with a Google account at <a href="https://aistudio.google.com" target="_blank" rel="noopener">aistudio.google.com</a> and choose <strong>Create API key</strong> (direct link: <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a>).</li>
 <li>Copy the key into a file called <code>.env</code> in your project folder:<pre><code>GEMINI_API_KEY=paste-your-key-here</code></pre></li>
 <li>Add <code>.env</code> to <code>.gitignore</code> <strong>now</strong> (the text is on the <a href="github.html">GitHub how-to</a>).</li>
 </ol>
@@ -78,12 +78,12 @@ response = client.models.generate_content(
 )
 print(response.text)</code></pre>
 <p>If a model name has changed by the 30th, pick any model whose name starts with <code>gemma-4</code> from the model list in AI Studio. Keep the model name in one place in your code; your README names it (see <a href="build.html">Build</a>).</p>
-<p>Not a Python person? The same call exists in JavaScript (<code>@google/genai</code>), Go and REST; the <a href="https://ai.google.dev/gemini-api/docs/quickstart">quickstart</a> has every tab (its example code targets Gemini models; swap in a <code>gemma-4</code> model name).</p>
+<p>Not a Python person? The same call exists in JavaScript (<code>@google/genai</code>), Go and REST; the <a href="https://ai.google.dev/gemini-api/docs/quickstart" target="_blank" rel="noopener">quickstart</a> has every tab (its example code targets Gemini models; swap in a <code>gemma-4</code> model name).</p>
 <p>Both Gemma 4 models on the Gemini API also take images (not audio): see Google's page in Links.</p>
 </section>
 <section>
 <h2>3. Optional backup: run it locally (10 minutes plus the download)</h2>
-<p>Install Ollama from <a href="https://ollama.com">ollama.com</a>, then:</p>
+<p>Install Ollama from <a href="https://ollama.com" target="_blank" rel="noopener">ollama.com</a>, then:</p>
 <pre><code>ollama pull gemma4:e4b      # about 7 GB; the default size and the sweet spot for most laptops
 ollama run gemma4:e4b "Say hello in one line"</code></pre>
 <p>Smaller: <code>gemma4:e2b</code> (about 5 GB) runs on almost anything.</p>
@@ -102,11 +102,11 @@ ollama run gemma4:e4b "Say hello in one line"</code></pre>
 <section>
 <h2>5. Links</h2>
 <ul>
-<li><a href="https://ai.google.dev/gemma/docs/core/gemma_on_gemini_api">Gemma on the Gemini API</a>: model names and the code above</li>
-<li><a href="https://ai.google.dev/gemini-api/docs/api-key">API key</a></li>
-<li>MLH <a href="https://mlh.link/gemma">Gemma hub</a> and <a href="https://mlh.link/gemma-beginnerguide">beginner guide</a> (the Gemma Cookbook on GitHub)</li>
-<li><a href="https://ai.google.dev/gemini-api/docs/rate-limits">Rate limits</a></li>
-<li><a href="https://ollama.com/library/gemma4">Ollama Gemma 4</a></li>
+<li><a href="https://ai.google.dev/gemma/docs/core/gemma_on_gemini_api" target="_blank" rel="noopener">Gemma on the Gemini API</a>: model names and the code above</li>
+<li><a href="https://ai.google.dev/gemini-api/docs/api-key" target="_blank" rel="noopener">API key</a></li>
+<li>MLH <a href="https://mlh.link/gemma" target="_blank" rel="noopener">Gemma hub</a> and <a href="https://mlh.link/gemma-beginnerguide" target="_blank" rel="noopener">beginner guide</a> (the Gemma Cookbook on GitHub)</li>
+<li><a href="https://ai.google.dev/gemini-api/docs/rate-limits" target="_blank" rel="noopener">Rate limits</a></li>
+<li><a href="https://ollama.com/library/gemma4" target="_blank" rel="noopener">Ollama Gemma 4</a></li>
 <li>Our datasets: <a href="data.html">Data</a></li>
 </ul>
 </section>
@@ -114,7 +114,7 @@ ollama run gemma4:e4b "Say hello in one line"</code></pre>
 <footer class="site-footer">
 <div class="wrap">
 <span>A Hacktoberfest Hack Day, hosted by AI Collective Adelaide</span>
-<a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md">MLH Code of Conduct</a>
+<a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md" target="_blank" rel="noopener">MLH Code of Conduct</a>
 </div>
 </footer>
 </body>
