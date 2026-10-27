@@ -59,6 +59,7 @@
 <li>Click <strong>Create repository</strong>. Share the link with your team.</li>
 </ol>
 <p><strong>Check:</strong> the repo page shows <strong>Public</strong> next to its name and <strong>MIT license</strong> on the right.</p>
+<p><strong>Starter files:</strong> a README template, the <code>.gitignore</code>, <code>sample.env</code> and a first Gemma script are in <a href="https://github.com/klimhawk/h4h-adelaide-2026/tree/main/starter" target="_blank" rel="noopener">our repo's starter folder</a>. Copy in what you need.</p>
 <p><strong>Forgot one?</strong> To make it public: <strong>Settings</strong>, then <strong>Change visibility</strong> (in the red Danger Zone box). To add the licence: <strong>Add file</strong>, <strong>Create new file</strong>, name it <code>LICENSE</code>, click <strong>Choose a license template</strong>, pick <strong>MIT License</strong>, then <strong>Commit changes</strong>.</p>
 <p><strong>Invite your team:</strong> <strong>Settings</strong>, <strong>Collaborators</strong>, <strong>Add people</strong>; they accept the email invite. Teammates without a GitHub account can still view and download from a public repo.</p>
 </section>
@@ -77,21 +78,7 @@
 </table>
 </div>
 <p>Why these stay out: see <a href="build.html">Build</a>.</p>
-<p><strong><code>.gitignore</code></strong>: create a file named <code>.gitignore</code> in your project folder at the start, with these lines:</p>
-<pre><code># secrets
-.env
-*.env
-.streamlit/secrets.toml
-# data you may not publish: name each Snowflake Marketplace export
-# data/my_marketplace_export.csv
-# Python and tools
-.venv/
-venv/
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-.DS_Store</code></pre>
-<p>Keep keys in <code>.env</code> from the first minute, and they stay out automatically. Name each Snowflake Marketplace export in <code>.gitignore</code>, as the <a href="https://github.com/klimhawk/h4h-adelaide-2026/blob/main/worked-example/.gitignore" target="_blank" rel="noopener">worked example</a> does. Open data you may share goes up with your code.</p>
+<p><strong><code>.gitignore</code></strong>: copy the one in our <a href="https://github.com/klimhawk/h4h-adelaide-2026/tree/main/starter" target="_blank" rel="noopener">starter folder</a> into your project folder at the start. Keys in <code>.env</code> then stay out automatically. Add a line naming each Snowflake Marketplace export, as the <a href="https://github.com/klimhawk/h4h-adelaide-2026/blob/main/worked-example/.gitignore" target="_blank" rel="noopener">worked example</a> does. Open data you may share goes up with your code.</p>
 </section>
 <section>
 <h2>Add your files: pick one way</h2>
