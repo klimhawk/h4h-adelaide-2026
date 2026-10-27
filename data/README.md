@@ -281,8 +281,8 @@ LGA. Filter to SA. *CC BY.*
 
 ## Using the data in Snowflake
 
-Every table here is CSV or XLSX (maps are GeoJSON or shapefiles), so it loads into Snowflake
-like any other file. The event site's Snowflake how-to shows the steps.
+Every table here is CSV or XLSX (maps are GeoJSON or shapefiles). To get a CSV into Snowflake,
+ask CoCo to load it, for example: "Load data/[file].csv into a new table. Keep postcodes as text."
 
 ---
 

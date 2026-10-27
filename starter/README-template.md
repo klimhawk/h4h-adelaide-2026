@@ -21,7 +21,7 @@ Everything else is advice: keep what helps your team, cut what does not.
 <!-- Checked for a challenge: Best Use of Gemma 4 and both open-source challenges. -->
 
 - **Model:** Gemma 4, `[model name, for example gemma-4-26b-a4b-it]`, through the Gemini API
-- **Licence:** [link to the Gemma 4 licence]
+- **Licence:** [Apache 2.0](https://ai.google.dev/gemma/apache_2)
 
 ## Data
 
