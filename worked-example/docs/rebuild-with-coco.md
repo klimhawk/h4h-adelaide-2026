@@ -202,10 +202,3 @@ file list first. Commit and push only when you choose to publish. If uploading t
 select files individually: browser uploads do not apply `.gitignore` to files you drag in.
 
 Do not publish credentials, Marketplace exports or raw session logs.
-
-## Rehearse the demo
-
-Show the project in about three minutes: the question, header numbers, map, race, one postcode
-answer, scatter caption, then how CoCo helped. Check the trial balance again, and record unresolved
-issues. Stop if CoCo access is refused or a step needs spending or permissions you have not agreed.
-The original build did not need Cortex AI function calls; Gemma runs through the Gemini API.
