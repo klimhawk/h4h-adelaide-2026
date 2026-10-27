@@ -55,7 +55,7 @@ Tip: A2 is counts, not rates. Divide by population (F2) to compare regions fairl
 
 Tip: present deaths data with care. Small numbers are suppressed, and behind each one is a person.
 
-**Challenge ideas:** *Getting help at home* (A2, A3) · *Distance should not decide* (H2)
+**Project ideas:** *Getting help at home* (A2, A3) · *Distance should not decide* (H2)
 
 ---
 
@@ -82,7 +82,7 @@ Tip: present deaths data with care. Small numbers are suppressed, and behind eac
 Tip: R1 and R2 (and R3, if you get it) use ANZSCO occupation codes. Join on the code, not the
 job title.
 
-**Challenge ideas:** *Next job, next skill* (R1, R2) · *Filling the trade pipeline* (R1, R4, and R3 from [Get it yourself](#get-it-yourself))
+**Project ideas:** *Next job, next skill* (R1, R2) · *Filling the trade pipeline* (R1, R4, and R3 from [Get it yourself](#get-it-yourself))
 
 ---
 
@@ -132,7 +132,7 @@ comparable.
 | ● | S10 Waste and resource recovery | Waste generated and recycled | state | 2026 database | XLSX | [folder](extras/3_sustainability/S10_nwrr-database-2026/) |
 | ↗ | S13, S14 Digital Earth Australia | Land cover and surface water from satellites | grid | 1986 to now | GeoTIFF (large) | [steps](#get-it-yourself) |
 
-**Challenge ideas:** *Power to the people* (S1) · *Every drop counts* (W1) · *Rain to harvest* (G1, G2, with S5 from [Get it yourself](#get-it-yourself))
+**Project ideas:** *Power to the people* (S1) · *Every drop counts* (W1) · *Rain to harvest* (G1, G2, with S5 from [Get it yourself](#get-it-yourself))
 
 ---
 

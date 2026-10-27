@@ -53,11 +53,13 @@ The calls use `thinking_level="minimal"` to keep answers to about 3 s.
 
 ## Data
 
-- Clean Energy Regulator small-scale battery and solar installations by postcode (CC BY 4.0): the
-  two source CSVs and the SA monthly battery series are included, covering data to August 2026.
-- ABS SEIFA 2021 and ABS postal area boundaries via Data Army Intel on Snowflake Marketplace.
-  The joined CSV and boundary export are not included. Generate them in your own Snowflake account
-  using the project's documented workflow.
+| Dataset | Source | Licence | Credit line |
+| --- | --- | --- | --- |
+| Small-scale battery installations by postcode, to August 2026 (`data/sgu-battery-installations-2011-to-present-and-totals.csv`) | [Clean Energy Regulator](https://cer.gov.au/markets/reports-and-data/small-scale-installation-postcode-data) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Licensed from the Clean Energy Regulator, Commonwealth of Australia under a Creative Commons Attribution 4.0 licence. |
+| Small-scale solar installations by postcode, to August 2026 (`data/sgu-solar-installations-2011-to-present-and-totals.csv`) | [Clean Energy Regulator](https://cer.gov.au/markets/reports-and-data/small-scale-installation-postcode-data) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Licensed from the Clean Energy Regulator, Commonwealth of Australia under a Creative Commons Attribution 4.0 licence. |
+| SA monthly battery series (`data/sa_battery_monthly.csv`), made from the CER battery file above | [Clean Energy Regulator](https://cer.gov.au/markets/reports-and-data/small-scale-installation-postcode-data) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | Licensed from the Clean Energy Regulator, Commonwealth of Australia under a Creative Commons Attribution 4.0 licence. |
+| ABS SEIFA 2021 by postal area. Not in this repo: rebuild it in Snowflake | Australian Bureau of Statistics, through Data Army Intel's listing on Snowflake Marketplace | The listing's terms | Australian Bureau of Statistics, through Data Army Intel on Snowflake Marketplace |
+| ABS postal area boundaries 2021. Not in this repo: rebuild them in Snowflake | Australian Bureau of Statistics, through Data Army Intel's listing on Snowflake Marketplace | The listing's terms | Australian Bureau of Statistics, through Data Army Intel on Snowflake Marketplace |
 
 Details: [docs/data.md](docs/data.md).
 
@@ -70,7 +72,7 @@ Details: [docs/data.md](docs/data.md).
 - **App:** built the Streamlit app and its headless tests from the spec, fixed Gemma latency, and
   added error handling.
 
-Snowflake prize evidence: [docs/how-coco-helped.md](docs/how-coco-helped.md).
+Snowflake challenge evidence: [docs/how-coco-helped.md](docs/how-coco-helped.md).
 
 ## AI tools we used
 
@@ -78,7 +80,6 @@ Snowflake prize evidence: [docs/how-coco-helped.md](docs/how-coco-helped.md).
   `cortex` CLI (`cortex search marketplace`).
 - **Gemma 4 through the Gemini API:** the model behind the app's explanations, called with the
   `google-genai` SDK.
-
 - **Claude Code:** prepared the original build design and app specification.
 - **Codex:** checked the app, prepared this public worked example and captured its screenshots.
 
@@ -114,6 +115,10 @@ SQL and commands needed before building and running the app.
 
 ## How to run
 
+Tracks 1 and 2 cannot run the app as it is, because two of its three data files come from
+Snowflake Marketplace and are not in this repo. The `cortex` CLI may also not work on event
+trial accounts.
+
 The separate [Rebuild with CoCo](docs/rebuild-with-coco.md) guide contains the design prompts
 and checkpoints. [Rebuild from scratch](docs/rebuild.md) contains the SQL and commands.
 
@@ -134,3 +139,7 @@ From the `worked-example/` folder, run:
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/streamlit run app.py
 ```
+
+## Licence
+
+The code is MIT: see [LICENSE](../LICENSE). Each dataset keeps its own licence: see [Data](#data).

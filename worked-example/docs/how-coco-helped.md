@@ -1,6 +1,6 @@
 # How CoCo helped
 
-This document records CoCo's contribution as evidence for the Snowflake prize: finding and
+This document records CoCo's contribution as evidence for the Snowflake challenge: finding and
 understanding freely accessible Marketplace data, preparing it in Snowflake, and building a
 project that uses Gemma 4 through the Gemini API.
 
@@ -18,7 +18,7 @@ tables, check they are free in the account region, add them, and verify them wit
 
 **What CoCo did:** found the account region and installed the `cortex` CLI. It then searched the
 Marketplace, filtered to that region, and read each listing's metadata to confirm both are free
-and available there. The owner clicked Get and accepted the terms; CoCo then checked the tables,
+and available there. We clicked Get and accepted the terms; CoCo then checked the tables,
 row counts and joins with SQL.
 
 **Key commands and queries:**
@@ -75,8 +75,8 @@ GROUP BY poa ORDER BY irsd_score NULLS LAST;
 - `POA` and `POSTAL_AREA_CODE` differ for two national catch-all codes (9494 and 9797), so join on
   `POA`.
 - Three SA postal areas have no score (5111, 5160, 5950); all have tiny populations.
-- Small populations distort the rankings: the most disadvantaged postcode, 5734, has 114
-  residents. CoCo suggested a population floor such as URP >= 1000.
+- Small populations distort the rankings: the most disadvantaged postcodes include some with
+  very few residents. CoCo suggested a population floor such as URP >= 1000.
 
 ## 3. Loading and reshaping the CSVs
 
@@ -84,7 +84,7 @@ GROUP BY poa ORDER BY irsd_score NULLS LAST;
 and data/sgu-solar-installations-2011-to-present-and-totals.csv into new tables. Keep postcodes as
 text. Reshape the months into rows."
 
-**What CoCo did:** profiled both files locally first. It then proposed a load plan, which the owner
+**What CoCo did:** profiled both files locally first. It then proposed a load plan, which we
 approved, and loaded every column as TEXT. Finally it unpivoted the month columns into one row per
 postcode and month and checked the totals against the CSV's Total column.
 

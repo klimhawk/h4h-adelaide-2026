@@ -26,7 +26,7 @@ Everything else is advice: keep what helps your team, cut what does not.
 ## Data
 
 <!-- The data licences ask you to credit the source. Our data guide has a credit line
-     for every dataset. -->
+     for every dataset: put it here and on your final slide. -->
 
 | Dataset | Source | Licence | Credit line |
 | --- | --- | --- | --- |
@@ -56,5 +56,7 @@ Everything else is advice: keep what helps your team, cut what does not.
 [Your names, if you want them here.]
 
 ## Licence
+
+<!-- Checked for a challenge: both open-source challenges. -->
 
 MIT: see [LICENSE](LICENSE).

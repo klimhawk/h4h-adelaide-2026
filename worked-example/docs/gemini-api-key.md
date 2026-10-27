@@ -5,7 +5,7 @@ Google AI Studio and name the setting `GEMINI_API_KEY`.
 
 ## 1. Create the key yourself
 
-1. Open [Google AI Studio's API Keys page](https://aistudio.google.com/api-keys) and sign in
+1. Open [Google AI Studio's API Keys page](https://aistudio.google.com/apikey) and sign in
    with your Google account. Review any terms yourself.
 2. Use an existing project you control, or create a project through AI Studio. New users may
    already have a default project and key. If an existing Cloud project is missing, import it
@@ -14,8 +14,8 @@ Google AI Studio and name the setting `GEMINI_API_KEY`.
    Copy the key privately. Do not paste it into a coding-agent chat.
 
 Google's [API key guide](https://ai.google.dev/gemini-api/docs/api-key) explains project setup,
-key creation and permission errors. Check your project's available quota and billing settings;
-creating a key does not establish that a particular model call will succeed.
+key creation and permission errors. Check your project's available quota; creating a key does
+not establish that a particular model call will succeed.
 
 ## 2. Save it beside app.py
 

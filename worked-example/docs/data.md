@@ -24,7 +24,7 @@ To work through these steps by pasting prompts into CoCo, follow
    Data - Free**, provided by **Data Army Intel** (listing `GZSUZ2MM5HIL`).
 2. Search for **Geography - Boundaries & Insights - Australia**, also provided by
    **Data Army Intel** (listing `GZSUZCN9CY`).
-3. Check pricing and availability in your account region. The account owner clicks **Get** and
+3. Check pricing and availability in your account region. The account holder clicks **Get** and
    reviews and accepts each listing's terms. The original build used free listings; confirm
    the current offer before proceeding.
 4. Follow [rebuild.md, steps 1 to 4](rebuild.md#1-get-the-two-marketplace-listings) to mount the
@@ -40,9 +40,12 @@ steps used in the project, rather than distributing the exports.
 
 ## CER source downloads
 
-The original CER download URL and date were not recorded during the build. The included CSV
-headers identify their final month as August 2026. Official source pages verified on
-27 October 2026:
+The two CER CSVs were downloaded on 3 October 2026 from the
+[CER small-scale installation postcode data](https://cer.gov.au/markets/reports-and-data/small-scale-installation-postcode-data)
+page. They are the same files as in
+[`data/3_sustainability/S1_cer-small-scale-installations/`](../../data/3_sustainability/S1_cer-small-scale-installations/).
+The included CSV headers identify their final month as August 2026. Official source pages verified
+on 27 October 2026:
 
 - [CER small-scale installation postcode data](https://cer.gov.au/markets/reports-and-data/small-scale-installation-postcode-data)
 - [CER battery installation download](https://cer.gov.au/document/sgu-battery-installations-2011-to-present-and-totals)

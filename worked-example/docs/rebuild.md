@@ -1,5 +1,7 @@
 # Rebuild from scratch
 
+**Learn from it, but do not submit it or copy its code.** Your project must be your team's own work, built during the event. Look at how it is set up, how it calls Gemma and how CoCo helped, then build your own.
+
 For the prompt-led design we followed, see [Rebuild with CoCo](rebuild-with-coco.md).
 This guide supplies the SQL and commands for those steps. The app requirements, input schema,
 Gemma prompt and acceptance checks are defined in [APP-SPEC.md](../APP-SPEC.md).
@@ -11,7 +13,7 @@ boundaries are not distributed; generate them in your own account before running
 See [data.md](data.md) for the file status, sources and terms.
 
 You need a Snowflake account with access to the two listings, a warehouse and permission to
-create the demo database and tables. The account owner reviews and accepts listing terms.
+create the demo database and tables. The account holder reviews and accepts listing terms.
 Replace `<connection name>`, `<account region>` and `<project folder>` with your own values,
 and select your own warehouse. Run local-file `PUT` and `GET` commands through a Snowflake
 client that supports them, as in the original CoCo build. Use an absolute folder path
@@ -43,7 +45,7 @@ client that supports them, as in the original CoCo build. Use an absolute folder
    ```
 
 4. In Snowsight, open each listing, click Get and accept the terms. This is a manual step that the
-   account owner does. Keep the default database names: the steps below assume
+   account holder does. Keep the default database names: the steps below assume
    `ABS_SOCIOECONOMIC_INDEXES_FOR_AREAS_SEIFA_2021_DATA_FREE` and
    `GEOGRAPHY_BOUNDARIES_INSIGHTS_AUSTRALIA`.
 

@@ -1,5 +1,7 @@
 # Battery Race: app specification
 
+**Learn from it, but do not submit it or copy its code.** Your project must be your team's own work, built during the event. Look at how it is set up, how it calls Gemma and how CoCo helped, then build your own.
+
 **Status:** v1, 2026-10-24. App specification for the Battery Race worked example.
 
 ## 1. Purpose
@@ -8,8 +10,8 @@ A one-page local web app that answers: **which South Australian postcodes are wi
 boom since July 2025, and is it the well-off ones?** Visitors type their postcode and get a plain-English
 answer from Gemma 4. It must work as a three-minute live demo on a projector.
 
-MLH judges weigh Technology, Design, Completion and Learning equally, and look for Gemma "through the
-Gemini API" shown working, so the Gemma moment is visible and labelled.
+Judges look for Gemma "through the Gemini API" shown working, so the Gemma moment is visible and
+labelled.
 
 ## 2. Inputs
 

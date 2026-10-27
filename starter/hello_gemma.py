@@ -11,6 +11,7 @@ Run it with: python hello_gemma.py
 
 from dotenv import load_dotenv
 from google import genai
+from google.genai import types
 
 load_dotenv()                      # reads GEMINI_API_KEY from .env
 client = genai.Client()            # picks the key up from the environment
@@ -18,5 +19,7 @@ client = genai.Client()            # picks the key up from the environment
 response = client.models.generate_content(
     model="gemma-4-26b-a4b-it",    # Google's suggested starting model; gemma-4-31b-it is the bigger one
     contents="In two sentences: what does a hackathon team need to know about aged care in South Australia?",
+    # Gemma 4 thinks first by default (20 to 60 s); "minimal" answers in seconds
+    config=types.GenerateContentConfig(thinking_config=types.ThinkingConfig(thinking_level="minimal")),
 )
 print(response.text)
