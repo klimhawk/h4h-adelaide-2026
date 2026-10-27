@@ -5,20 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hack for Humanity Adelaide: Gemma how-to</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
-<style>
-body{margin:0;background:#e4e5da}
-a{color:#203c36}a:hover{color:#3d5f58}
-p,ul,ol{margin:0}
-li+li{margin-top:8px}
-code{font-family:'Space Mono',monospace;font-size:0.88em;background:#ffffff;padding:1px 6px;border-radius:4px}
-pre code{background:none;padding:0;font-size:15px}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="site.css?v=6e8bbfbc68">
 </head>
 <body>
-<div style="background: #e4e5da; color: #203c36; font-family: 'Inter', system-ui, sans-serif; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.5">
-<header style="background: #e4e5da; color: #203c36; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; gap: 4px">
-<a href="index.html" aria-label="Hack for Humanity Adelaide, home" style="display: block; width: 300px; max-width: 78%; line-height: 0">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a class="logo" href="index.html" aria-label="Hack for Humanity Adelaide, home">
 <svg viewBox="0 0 300 120" width="100%" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 <polygon points="0,0 284,0 284,20 248,20 248,40 212,40 212,60 176,60 176,80 72,80 72,100 0,100" fill="#3d5f58"></polygon>
 <rect x="284" y="0" width="16" height="20" fill="#f5b726"></rect>
@@ -32,40 +27,43 @@ pre code{background:none;padding:0;font-size:15px}
 <text x="20" y="64" fill="#ffffff" font-family="'Space Mono', monospace" font-size="19">Adelaide</text>
 </svg>
 </a>
-<nav aria-label="Pages" style="display: flex; flex-wrap: wrap; gap: 0 28px; padding: 8px clamp(16px, 4vw, 48px) 0; box-sizing: border-box; max-width: 1008px">
-<a href="index.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Home</a>
-<a href="before-friday.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Before Friday</a>
-<a href="build.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Build</a>
-<a href="submit.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Submit and win</a>
-<a href="data.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Data</a>
-<a href="github.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">GitHub</a>
-<a href="gemma.html" aria-current="page" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent; border-bottom-color: #f5b726;">Gemma</a>
-<a href="snowflake.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Snowflake</a>
+<nav class="site-nav" aria-label="Pages">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="before-friday.html">Before Friday</a></li>
+<li><a href="build.html">Build</a></li>
+<li><a href="submit.html">Submit and win</a></li>
+<li><a href="data.html">Data</a></li>
+<li><a href="github.html">GitHub</a></li>
+<li><a href="gemma.html" aria-current="page">Gemma</a></li>
+<li><a href="snowflake.html">Snowflake</a></li>
+</ul>
 </nav>
+</div>
 </header>
-<main style="max-width: 1008px; box-sizing: border-box; padding: 40px clamp(16px, 4vw, 48px) 72px; display: flex; flex-direction: column; gap: 36px">
-<section style="display: flex; flex-direction: column; gap: 16px">
-<h1 style="margin: 0; align-self: flex-start; background: #f5b726; padding: 4px 12px; font-family: 'Space Mono', monospace; font-weight: 400; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.15">Gemma how-to</h1>
+<main id="main" class="page wrap">
+<section>
+<h1>Gemma how-to</h1>
 <p>Gemma 4 is Google's open-weight model. You can use it two ways:</p>
-<ul style="padding-left: 22px">
+<ul>
 <li><strong>Through the Gemini API</strong> (hosted, free key, nothing to install).</li>
 <li><strong>Locally with Ollama</strong> (offline, unlimited, needs a decent laptop and a multi-gigabyte download before you arrive). Fine for building, and your backup if the API is slow.</li>
 </ul>
 <p>Which way the Gemma challenge needs: see <a href="submit.html">Submit and win</a>. How Gemma should work in your app: see <a href="build.html">Build</a>.</p>
 <p>Steps 1 and 2 take about 10 minutes at home. Everything to set up before the day: see <a href="before-friday.html">Before Friday</a>.</p>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">1. Get a free API key (3 minutes)</h2>
-<ol style="padding-left: 26px">
+<section>
+<h2>1. Get a free API key (3 minutes)</h2>
+<ol>
 <li>Sign in with a Google account at <a href="https://aistudio.google.com">aistudio.google.com</a> and choose <strong>Create API key</strong> (direct link: <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>).</li>
-<li>Copy the key into a file called <code>.env</code> in your project folder:<pre style="margin: 10px 0 0; background: #ffffff; border: 1px solid #ced2c8; border-radius: 8px; padding: 16px 20px; overflow-x: auto; font-family: 'Space Mono', monospace; line-height: 1.5"><code>GEMINI_API_KEY=paste-your-key-here</code></pre></li>
+<li>Copy the key into a file called <code>.env</code> in your project folder:<pre><code>GEMINI_API_KEY=paste-your-key-here</code></pre></li>
 <li>Add <code>.env</code> to <code>.gitignore</code> <strong>now</strong> (the text is on the <a href="github.html">GitHub how-to</a>).</li>
 </ol>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">2. First call in Python (5 minutes)</h2>
-<pre style="margin: 0; background: #ffffff; border: 1px solid #ced2c8; border-radius: 8px; padding: 16px 20px; overflow-x: auto; font-family: 'Space Mono', monospace; line-height: 1.5"><code>pip install google-genai python-dotenv</code></pre>
-<pre style="margin: 0; background: #ffffff; border: 1px solid #ced2c8; border-radius: 8px; padding: 16px 20px; overflow-x: auto; font-family: 'Space Mono', monospace; line-height: 1.5"><code>from dotenv import load_dotenv
+<section>
+<h2>2. First call in Python (5 minutes)</h2>
+<pre><code>pip install google-genai python-dotenv</code></pre>
+<pre><code>from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
@@ -83,17 +81,17 @@ print(response.text)</code></pre>
 <p>Not a Python person? The same call exists in JavaScript (<code>@google/genai</code>), Go and REST; the <a href="https://ai.google.dev/gemini-api/docs/quickstart">quickstart</a> has every tab (its example code targets Gemini models; swap in a <code>gemma-4</code> model name).</p>
 <p>Both Gemma 4 models on the Gemini API also take images (not audio): see Google's page in Links.</p>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">3. Optional backup: run it locally (10 minutes plus the download)</h2>
+<section>
+<h2>3. Optional backup: run it locally (10 minutes plus the download)</h2>
 <p>Install Ollama from <a href="https://ollama.com">ollama.com</a>, then:</p>
-<pre style="margin: 0; background: #ffffff; border: 1px solid #ced2c8; border-radius: 8px; padding: 16px 20px; overflow-x: auto; font-family: 'Space Mono', monospace; line-height: 1.5"><code>ollama pull gemma4:e4b      # about 7 GB; the default size and the sweet spot for most laptops
+<pre><code>ollama pull gemma4:e4b      # about 7 GB; the default size and the sweet spot for most laptops
 ollama run gemma4:e4b "Say hello in one line"</code></pre>
 <p>Smaller: <code>gemma4:e2b</code> (about 5 GB) runs on almost anything.</p>
 <p>Ollama serves an OpenAI-style endpoint at <code>http://localhost:11434/v1</code>. Google's own OpenAI-compatible endpoint lists Gemini models only, so for Gemma use the <code>google-genai</code> call above for hosted and the Ollama endpoint for local.</p>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">4. Put it in your code</h2>
-<ul style="padding-left: 22px">
+<section>
+<h2>4. Put it in your code</h2>
+<ul>
 <li><strong>Wrap the call in one function</strong> (<code>ask(prompt, image=None)</code>) and call that everywhere.</li>
 <li><strong>Keep prompts short and structured.</strong> Give the model the data (a row, a table, a chart description) and ask for a specific output: a checklist, a plain-English explanation, a JSON object. Low temperature (about 0.2) for factual output, higher for ideas.</li>
 <li><strong>Keep thinking minimal</strong> for a live demo, as in the code above. Without it, an answer can take a minute.</li>
@@ -101,9 +99,9 @@ ollama run gemma4:e4b "Say hello in one line"</code></pre>
 <li><strong>Rate limits.</strong> Gemma 4 is free of charge on the Gemini API (there is no paid tier for it); rate limits apply per Google project, not per key, so a second key in the same project adds nothing. Google publishes no Gemma-specific numbers; check your project's limits in AI Studio. If you hit a limit while building, switch to Ollama and come back to the API for the demo.</li>
 </ul>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">5. Links</h2>
-<ul style="padding-left: 22px">
+<section>
+<h2>5. Links</h2>
+<ul>
 <li><a href="https://ai.google.dev/gemma/docs/core/gemma_on_gemini_api">Gemma on the Gemini API</a>: model names and the code above</li>
 <li><a href="https://ai.google.dev/gemini-api/docs/api-key">API key</a></li>
 <li>MLH <a href="https://mlh.link/gemma">Gemma hub</a> and <a href="https://mlh.link/gemma-beginnerguide">beginner guide</a> (the Gemma Cookbook on GitHub)</li>
@@ -113,10 +111,11 @@ ollama run gemma4:e4b "Say hello in one line"</code></pre>
 </ul>
 </section>
 </main>
-<footer style="background: #3d5f58; color: #ffffff; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.5; padding: 28px clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 8px 32px">
+<footer class="site-footer">
+<div class="wrap">
 <span>A Hacktoberfest Hack Day, hosted by AI Collective Adelaide</span>
-<a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md" style="color: #ffffff">MLH Code of Conduct</a>
-</footer>
+<a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md">MLH Code of Conduct</a>
 </div>
+</footer>
 </body>
 </html>

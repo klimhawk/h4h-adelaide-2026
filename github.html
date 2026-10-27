@@ -5,23 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hack for Humanity Adelaide: GitHub how-to</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
-<style>
-body{margin:0;background:#e4e5da}
-a{color:#203c36}a:hover{color:#3d5f58}
-p,ul,ol{margin:0}
-li+li{margin-top:8px}
-table{border-collapse:collapse;width:100%}
-th,td{border:1px solid #ced2c8;padding:10px 14px;text-align:left;vertical-align:top}
-th{background:#d9dccf;font-weight:600}
-code{font-family:'Space Mono',monospace;font-size:0.88em;background:#ffffff;padding:1px 6px;border-radius:4px}
-pre code{background:none;padding:0;font-size:15px}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="site.css?v=6e8bbfbc68">
 </head>
 <body>
-<div style="background: #e4e5da; color: #203c36; font-family: 'Inter', system-ui, sans-serif; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.5">
-<header style="background: #e4e5da; color: #203c36; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; gap: 4px">
-<a href="index.html" aria-label="Hack for Humanity Adelaide, home" style="display: block; width: 300px; max-width: 78%; line-height: 0">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a class="logo" href="index.html" aria-label="Hack for Humanity Adelaide, home">
 <svg viewBox="0 0 300 120" width="100%" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 <polygon points="0,0 284,0 284,20 248,20 248,40 212,40 212,60 176,60 176,80 72,80 72,100 0,100" fill="#3d5f58"></polygon>
 <rect x="284" y="0" width="16" height="20" fill="#f5b726"></rect>
@@ -35,29 +27,32 @@ pre code{background:none;padding:0;font-size:15px}
 <text x="20" y="64" fill="#ffffff" font-family="'Space Mono', monospace" font-size="19">Adelaide</text>
 </svg>
 </a>
-<nav aria-label="Pages" style="display: flex; flex-wrap: wrap; gap: 0 28px; padding: 8px clamp(16px, 4vw, 48px) 0; box-sizing: border-box; max-width: 1008px">
-<a href="index.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Home</a>
-<a href="before-friday.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Before Friday</a>
-<a href="build.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Build</a>
-<a href="submit.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Submit and win</a>
-<a href="data.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Data</a>
-<a href="github.html" aria-current="page" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent; border-bottom-color: #f5b726;">GitHub</a>
-<a href="gemma.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Gemma</a>
-<a href="snowflake.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Snowflake</a>
+<nav class="site-nav" aria-label="Pages">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="before-friday.html">Before Friday</a></li>
+<li><a href="build.html">Build</a></li>
+<li><a href="submit.html">Submit and win</a></li>
+<li><a href="data.html">Data</a></li>
+<li><a href="github.html" aria-current="page">GitHub</a></li>
+<li><a href="gemma.html">Gemma</a></li>
+<li><a href="snowflake.html">Snowflake</a></li>
+</ul>
 </nav>
+</div>
 </header>
-<main style="max-width: 1008px; box-sizing: border-box; padding: 40px clamp(16px, 4vw, 48px) 72px; display: flex; flex-direction: column; gap: 36px">
-<section style="display: flex; flex-direction: column; gap: 20px">
-<h1 style="margin: 0; align-self: flex-start; background: #f5b726; padding: 4px 12px; font-family: 'Space Mono', monospace; font-weight: 400; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.15">GitHub how-to</h1>
+<main id="main" class="page wrap">
+<section class="intro">
+<h1>GitHub how-to</h1>
 <p>The clicks for putting your project on GitHub. Why the repo is public with the MIT licence, and what goes in your README: see <a href="build.html">Build</a>.</p>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">Make an account (5 minutes)</h2>
+<section>
+<h2>Make an account (5 minutes)</h2>
 <p>Sign up free at <strong>github.com/signup</strong> and confirm your email. Then sign in on the laptop you will bring.</p>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">Create the repo (2 minutes)</h2>
-<ol style="padding-left: 26px">
+<section>
+<h2>Create the repo (2 minutes)</h2>
+<ol>
 <li>On github.com, click <strong>New repository</strong>.</li>
 <li>Name it after your project. Choose <strong>Public</strong>.</li>
 <li>Tick <strong>Add a README file</strong>. Under <strong>Choose a license</strong>, pick <strong>MIT License</strong>.</li>
@@ -67,9 +62,9 @@ pre code{background:none;padding:0;font-size:15px}
 <p><strong>Forgot one?</strong> To make it public: <strong>Settings</strong>, then <strong>Change visibility</strong> (in the red Danger Zone box). To add the licence: <strong>Add file</strong>, <strong>Create new file</strong>, name it <code>LICENSE</code>, click <strong>Choose a license template</strong>, pick <strong>MIT License</strong>, then <strong>Commit changes</strong>.</p>
 <p><strong>Invite your team:</strong> <strong>Settings</strong>, <strong>Collaborators</strong>, <strong>Add people</strong>; they accept the email invite. Teammates without a GitHub account can still view and download from a public repo.</p>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">What goes in, what stays out</h2>
-<div style="overflow-x: auto">
+<section>
+<h2>What goes in, what stays out</h2>
+<div class="table-wrap">
 <table>
 <thead><tr><th>Upload</th><th>Keep out</th></tr></thead>
 <tbody>
@@ -83,7 +78,7 @@ pre code{background:none;padding:0;font-size:15px}
 </div>
 <p>Why these stay out: see <a href="build.html">Build</a>.</p>
 <p><strong><code>.gitignore</code></strong>: create a file named <code>.gitignore</code> in your project folder at the start, with these lines:</p>
-<pre style="margin: 0; background: #ffffff; border: 1px solid #ced2c8; border-radius: 8px; padding: 16px 20px; overflow-x: auto; font-family: 'Space Mono', monospace; line-height: 1.5"><code># secrets
+<pre><code># secrets
 .env
 *.env
 .streamlit/secrets.toml
@@ -98,41 +93,42 @@ __pycache__/
 .DS_Store</code></pre>
 <p>Keep keys in <code>.env</code> from the first minute, and they stay out automatically. Name each Snowflake Marketplace export in <code>.gitignore</code>, as the <a href="https://github.com/klimhawk/h4h-adelaide-2026/blob/main/worked-example/.gitignore">worked example</a> does. Open data you may share goes up with your code.</p>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">Add your files: pick one way</h2>
+<section>
+<h2>Add your files: pick one way</h2>
 <p><strong>A. In the browser (no tools needed).</strong> In the repo, click <strong>Add file</strong>, then <strong>Upload files</strong>, drag in <strong>only the files in the Upload column above</strong>, and click <strong>Commit changes</strong>. Never drag the whole project folder: the browser upload ignores <code>.gitignore</code> and would take <code>.env</code> and your Marketplace exports with it.</p>
 <p><strong>B. Ask your AI tool.</strong> If your builder already pushes to GitHub from your AI tool: first ask it to "show me every file that will be committed" and check none is in the Keep out column; then ask it to push to your repo link. Otherwise use A.</p>
-<div style="background: #8bb2de; border-radius: 8px; padding: 20px 24px">
+<div class="note">
 <p><strong>After every upload:</strong> open the repo page and look at the file list. No <code>.env</code>, no Marketplace data, no key.</p>
 </div>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">GitHub for non-coders</h2>
+<section>
+<h2>GitHub for non-coders</h2>
 <p>You only need three things.</p>
-<ul style="padding-left: 22px">
+<ul>
 <li><strong>See the files:</strong> open the repo link your team shares.</li>
 <li><strong>Download:</strong> everything at once with the green <strong>Code</strong> button, then <strong>Download ZIP</strong>; one file by opening it and clicking the download icon. Download again when you need the latest version; do not edit an old copy.</li>
 <li><strong>Add or update a file</strong> (needs a GitHub account and an invite): open the folder you want, click <strong>Add file</strong>, then <strong>Upload files</strong>, then <strong>Commit changes</strong>. Or open a text file and click the pencil to edit it.</li>
 </ul>
 <p>Who edits what: see the team tips on <a href="build.html">Build</a>.</p>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">The README</h2>
+<section>
+<h2>The README</h2>
 <p>Edit <code>README.md</code> in the repo: open it and click the pencil icon. What goes in it: see <a href="build.html">Build</a>.</p>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">If a key gets uploaded by mistake</h2>
+<section>
+<h2>If a key gets uploaded by mistake</h2>
 <p>Delete the key at its source straight away (for Gemma: Google AI Studio, API keys) and make a new one. Deleting the file from GitHub is not enough: the old version stays in the repo's history.</p>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">Submitting</h2>
+<section>
+<h2>Submitting</h2>
 <p>Submitting your repo link, and keeping the repo public afterwards: see <a href="submit.html">Submit and win</a>.</p>
 </section>
 </main>
-<footer style="background: #3d5f58; color: #ffffff; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.5; padding: 28px clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 8px 32px">
+<footer class="site-footer">
+<div class="wrap">
 <span>A Hacktoberfest Hack Day, hosted by AI Collective Adelaide</span>
-<a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md" style="color: #ffffff">MLH Code of Conduct</a>
-</footer>
+<a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md">MLH Code of Conduct</a>
 </div>
+</footer>
 </body>
 </html>

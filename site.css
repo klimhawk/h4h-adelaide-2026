@@ -1,0 +1,220 @@
+/* Hack for Humanity Adelaide participant site. Look: ../DESIGN.md. Built pages: build.py (D-72). */
+
+:root {
+  --bg: #e4e5da;
+  --ink: #203c36;
+  --green: #3d5f58;
+  --yellow: #f5b726;
+  --blue: #8bb2de;
+  --maroon: #671912;
+  --rule: #ced2c8;
+  --head: #d9dccf;
+  --white: #ffffff;
+  --mono: 'Space Mono', ui-monospace, monospace;
+  --sans: 'Inter', system-ui, sans-serif;
+  --col: 960px;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.5;
+}
+
+/* One column for header, main and footer */
+.wrap {
+  width: 100%;
+  max-width: calc(var(--col) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 10;
+  background: var(--white);
+  color: var(--ink);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.skip:focus { left: 16px; }
+
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; border-radius: 2px; }
+
+a { color: var(--ink); }
+a:hover { color: var(--green); }
+
+/* Header: pixel-stair corner, then the page links */
+.site-header { border-bottom: 1px solid var(--rule); }
+.site-header .wrap { display: flex; flex-direction: column; gap: 4px; padding-bottom: 4px; }
+.logo { display: block; width: 300px; max-width: 78%; line-height: 0; }
+.logo svg { width: 100%; height: auto; }
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-nav li + li { margin-top: 0; }
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 2px 0;
+  border-bottom: 4px solid transparent;
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.site-nav a:hover { border-bottom-color: var(--rule); color: var(--ink); }
+.site-nav a[aria-current="page"] { border-bottom-color: var(--yellow); }
+
+/* Main column */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-top: 40px;
+  padding-bottom: 72px;
+  overflow-wrap: break-word;
+}
+.page > section { display: flex; flex-direction: column; gap: 16px; }
+.page > section.intro { gap: 20px; }
+.page p, .page li { max-width: 75ch; }
+
+h1 {
+  margin: 0;
+  align-self: flex-start;
+  background: var(--yellow);
+  padding: 4px 12px;
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: clamp(34px, 4.4vw, 56px);
+  line-height: 1.15;
+}
+h2 { margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600; line-height: 1.3; }
+h2.with-tag { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+h3 { margin: 0; font-size: 20px; font-weight: 700; }
+
+p, ul, ol { margin: 0; }
+ul { padding-left: 22px; }
+ol { padding-left: 26px; }
+li + li { margin-top: 8px; }
+.lead { max-width: 760px; }
+
+.tbc {
+  display: inline-block;
+  border: 2px dashed var(--maroon);
+  color: var(--maroon);
+  padding: 0 8px;
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Buttons */
+.buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 22px;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover { background: var(--yellow); color: var(--ink); }
+
+/* Tables scroll inside their box, never the page */
+.table-wrap { overflow-x: auto; max-width: 100%; }
+.table-wrap.narrow { max-width: 560px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid var(--rule); padding: 10px 14px; text-align: left; vertical-align: top; }
+th { background: var(--head); font-weight: 600; }
+td.time { font-family: var(--mono); white-space: nowrap; }
+th.col-time { width: 110px; }
+th.col-theme { width: 24%; }
+
+/* Code */
+code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--white);
+  padding: 1px 6px;
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+pre {
+  margin: 0;
+  max-width: 100%;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 16px 20px;
+  overflow-x: auto;
+  font-family: var(--mono);
+  line-height: 1.5;
+}
+pre code { background: none; padding: 0; font-size: 15px; overflow-wrap: normal; }
+li pre { margin: 10px 0; }
+
+/* Callouts and cards */
+.note { background: var(--blue); border-radius: 8px; padding: 20px 24px; }
+blockquote {
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 16px; }
+.card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card p { font-size: 17px; }
+
+/* Checklists: the whole row is the tap target */
+.checklist { display: flex; flex-direction: column; gap: 10px; }
+.check { display: flex; gap: 14px; align-items: flex-start; min-height: 44px; cursor: pointer; }
+.check input {
+  width: 22px;
+  height: 22px;
+  margin: 4px 0 0;
+  accent-color: var(--green);
+  flex-shrink: 0;
+}
+
+/* Footer */
+.site-footer { background: var(--green); color: var(--white); font-size: 16px; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 32px; padding-block: 28px; }
+.site-footer a { color: var(--white); }
+.site-footer a:hover { color: var(--yellow); }
+.site-footer :focus-visible { outline-color: var(--white); }
+
+@media (max-width: 480px) {
+  .site-nav ul { gap: 0 18px; }
+  .site-nav a { font-size: 16px; }
+  .note { padding: 16px 18px; }
+  pre { padding: 14px 16px; }
+}

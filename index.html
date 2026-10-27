@@ -5,22 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hack for Humanity Adelaide: home</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
-<style>
-body{margin:0;background:#e4e5da}
-a{color:#203c36}a:hover{color:#3d5f58}
-p,ul,ol{margin:0}
-li+li{margin-top:6px}
-table{border-collapse:collapse;width:100%}
-th,td{border:1px solid #ced2c8;padding:10px 14px;text-align:left;vertical-align:top}
-th{background:#d9dccf;font-weight:600}
-.btn:hover{background:#f5b726 !important;color:#203c36 !important}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="site.css?v=6e8bbfbc68">
 </head>
 <body>
-<div style="background: #e4e5da; color: #203c36; font-family: 'Inter', system-ui, sans-serif; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.5">
-<header style="background: #e4e5da; color: #203c36; font-family: 'Inter', system-ui, sans-serif; display: flex; flex-direction: column; gap: 4px">
-<a href="index.html" aria-label="Hack for Humanity Adelaide, home" style="display: block; width: 300px; max-width: 78%; line-height: 0">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a class="logo" href="index.html" aria-label="Hack for Humanity Adelaide, home">
 <svg viewBox="0 0 300 120" width="100%" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
 <polygon points="0,0 284,0 284,20 248,20 248,40 212,40 212,60 176,60 176,80 72,80 72,100 0,100" fill="#3d5f58"></polygon>
 <rect x="284" y="0" width="16" height="20" fill="#f5b726"></rect>
@@ -34,68 +27,72 @@ th{background:#d9dccf;font-weight:600}
 <text x="20" y="64" fill="#ffffff" font-family="'Space Mono', monospace" font-size="19">Adelaide</text>
 </svg>
 </a>
-<nav aria-label="Pages" style="display: flex; flex-wrap: wrap; gap: 0 28px; padding: 8px clamp(16px, 4vw, 48px) 0; box-sizing: border-box; max-width: 1008px">
-<a href="index.html" aria-current="page" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent; border-bottom-color: #f5b726;">Home</a>
-<a href="before-friday.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Before Friday</a>
-<a href="build.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Build</a>
-<a href="submit.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Submit and win</a>
-<a href="data.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Data</a>
-<a href="github.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">GitHub</a>
-<a href="gemma.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Gemma</a>
-<a href="snowflake.html" style="color: #203c36; text-decoration: none; font-weight: 600; font-size: 17px; padding: 12px 2px 8px; border-bottom: 4px solid transparent;">Snowflake</a>
+<nav class="site-nav" aria-label="Pages">
+<ul>
+<li><a href="index.html" aria-current="page">Home</a></li>
+<li><a href="before-friday.html">Before Friday</a></li>
+<li><a href="build.html">Build</a></li>
+<li><a href="submit.html">Submit and win</a></li>
+<li><a href="data.html">Data</a></li>
+<li><a href="github.html">GitHub</a></li>
+<li><a href="gemma.html">Gemma</a></li>
+<li><a href="snowflake.html">Snowflake</a></li>
+</ul>
 </nav>
+</div>
 </header>
-<main style="max-width: 1008px; box-sizing: border-box; padding: 40px clamp(16px, 4vw, 48px) 72px; display: flex; flex-direction: column; gap: 36px">
-<section style="display: flex; flex-direction: column; gap: 20px">
-<h1 style="margin: 0; align-self: flex-start; background: #f5b726; padding: 4px 12px; font-family: 'Space Mono', monospace; font-weight: 400; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.15">Hack for Humanity Adelaide</h1>
-<p style="max-width: 760px">A free, one-afternoon build. Join a team and build something with Gemma, Google's open AI model, that could help someone in South Australia. You do not need to code.</p>
-<ul style="padding-left: 22px">
+<main id="main" class="page wrap">
+<section class="intro">
+<h1>Hack for Humanity Adelaide</h1>
+<p class="lead">A free, one-afternoon build. Join a team and build something with Gemma, Google's open AI model, that could help someone in South Australia. You do not need to code.</p>
+<ul>
 <li><strong>When:</strong> Friday 30 October 2026, 3 to 8pm.</li>
 <li><strong>Where:</strong> AI Masters Dojo, Level 3, 97 Pirie St, Adelaide.</li>
 <li><strong>Themes:</strong> health, education, sustainability.</li>
 <li><strong>Hosted by</strong> AI Collective Adelaide, as a Hacktoberfest Hack Day with Major League Hacking (MLH).</li>
 </ul>
-<div style="display: flex; flex-wrap: wrap; gap: 12px">
-<a class="btn" href="https://events.mlh.com/events/15286-hacktoberfest-hack-day-adelaide-x-the-ai-collective-adelaide" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #3d5f58; color: #ffffff; border-radius: 8px; text-decoration: none; font-weight: 600">Register on MLH</a>
-<a class="btn" href="https://luma.com/h4h-adelaide" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; background: #3d5f58; color: #ffffff; border-radius: 8px; text-decoration: none; font-weight: 600">RSVP on Luma</a>
+<div class="buttons">
+<a class="btn" href="https://events.mlh.com/events/15286-hacktoberfest-hack-day-adelaide-x-the-ai-collective-adelaide">Register on MLH</a>
+<a class="btn" href="https://luma.com/h4h-adelaide">RSVP on Luma</a>
 </div>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600; display: flex; flex-wrap: wrap; align-items: center; gap: 12px">The day <span style="display: inline-block; border: 2px dashed #671912; color: #671912; padding: 0 8px; border-radius: 4px; font-size: 15px; font-weight: 400; font-family: 'Space Mono', monospace">TBC: final times</span></h2>
-<div style="overflow-x: auto; max-width: 560px">
+<section>
+<h2 class="with-tag">The day <span class="tbc">TBC: final times</span></h2>
+<div class="table-wrap narrow">
 <table>
-<thead><tr><th style="width: 110px">Time</th><th></th></tr></thead>
+<thead><tr><th class="col-time">Time</th><th></th></tr></thead>
 <tbody>
-<tr><td style="font-family: 'Space Mono', monospace; white-space: nowrap">2:45pm</td><td>Doors open, check-in</td></tr>
-<tr><td style="font-family: 'Space Mono', monospace; white-space: nowrap">3:05pm</td><td>Welcome and problem briefing</td></tr>
-<tr><td style="font-family: 'Space Mono', monospace; white-space: nowrap">3:25pm</td><td>Teams form</td></tr>
-<tr><td style="font-family: 'Space Mono', monospace; white-space: nowrap">3:45pm</td><td>Build, about three hours</td></tr>
-<tr><td style="font-family: 'Space Mono', monospace; white-space: nowrap">6:50pm</td><td><strong>Submissions close</strong></td></tr>
-<tr><td style="font-family: 'Space Mono', monospace; white-space: nowrap">7:15pm</td><td>Demos and judging</td></tr>
-<tr><td style="font-family: 'Space Mono', monospace; white-space: nowrap">7:50pm</td><td>Awards</td></tr>
-<tr><td style="font-family: 'Space Mono', monospace; white-space: nowrap">8:00pm</td><td>Close</td></tr>
+<tr><td class="time">2:45pm</td><td>Doors open, check-in</td></tr>
+<tr><td class="time">3:05pm</td><td>Welcome and problem briefing</td></tr>
+<tr><td class="time">3:25pm</td><td>Teams form</td></tr>
+<tr><td class="time">3:45pm</td><td>Build, about three hours</td></tr>
+<tr><td class="time">6:50pm</td><td><strong>Submissions close</strong></td></tr>
+<tr><td class="time">7:15pm</td><td>Demos and judging</td></tr>
+<tr><td class="time">7:50pm</td><td>Awards</td></tr>
+<tr><td class="time">8:00pm</td><td>Close</td></tr>
 </tbody>
 </table>
 </div>
 </section>
-<section style="display: flex; flex-direction: column; gap: 14px">
-<h2 style="margin: 0; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600">Your way through</h2>
-<ol style="padding-left: 26px">
+<section>
+<h2>Your way through</h2>
+<ol>
 <li><a href="before-friday.html">Before Friday</a>: your role, and what to set up at home.</li>
 <li><a href="build.html">Build</a>: pick a track and build.</li>
 <li><a href="submit.html">Submit and win</a>: the three challenges, including Snowflake's, judging and how to submit.</li>
 </ol>
 <p>Look things up: <a href="data.html">Data</a>, <a href="github.html">GitHub how-to</a>, <a href="gemma.html">Gemma how-to</a>, <a href="snowflake.html">Snowflake how-to</a>.</p>
-<div style="background: #8bb2de; border-radius: 8px; padding: 20px 24px">
+<div class="note">
 <p>Questions before Friday: the <a href="https://discord.com/channels/1462210836675428454/1563874111137120316">chapter Discord</a>. On the day: any helper.</p>
 </div>
 </section>
 <p>All attendees follow the <a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md">MLH Code of Conduct</a>.</p>
 </main>
-<footer style="background: #3d5f58; color: #ffffff; font-family: 'Inter', system-ui, sans-serif; font-size: 16px; line-height: 1.5; padding: 28px clamp(16px, 4vw, 48px); display: flex; flex-wrap: wrap; gap: 8px 32px">
+<footer class="site-footer">
+<div class="wrap">
 <span>A Hacktoberfest Hack Day, hosted by AI Collective Adelaide</span>
-<a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md" style="color: #ffffff">MLH Code of Conduct</a>
-</footer>
+<a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md">MLH Code of Conduct</a>
 </div>
+</footer>
 </body>
 </html>
