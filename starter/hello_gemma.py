@@ -2,8 +2,8 @@
 
 Before you run it:
   1. pip install -r requirements.txt
-  2. Put your free key from aistudio.google.com/apikey in a file called .env:
-     GEMINI_API_KEY=paste-your-key-here
+  2. Put your free key from aistudio.google.com/apikey into sample.env, then rename
+     that file to .env.
   3. Make sure .env is listed in .gitignore, so the key never goes on GitHub.
 
 Run it with: python hello_gemma.py

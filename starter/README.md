@@ -8,6 +8,7 @@ freely.
 | [`README-template.md`](README-template.md) | A README layout that covers what the challenges check | Paste it into your repo's `README.md` and fill in the brackets |
 | [`LICENSE`](LICENSE) | The MIT licence | Only if you forgot to pick MIT when you made your repo. Put your team name in the copyright line |
 | [`.gitignore`](.gitignore) | Keeps your key and private data off GitHub | Copy it into your project folder at the start |
+| [`sample.env`](sample.env) | A template for your Gemini key | Paste your key in, then rename it `.env` |
 | [`hello_gemma.py`](hello_gemma.py) | Your first Gemma 4 call, in Python | Steps are at the top of the file. Try it at home first |
 | [`requirements.txt`](requirements.txt) | The two Python packages the script needs | `pip install -r requirements.txt` |
 

@@ -12,7 +12,7 @@ needs from here.
 | --- | --- |
 | [`starter/`](starter/) | Files for your own repo: a README template, the MIT `LICENSE`, a `.gitignore`, and a short script for your first Gemma call |
 | [`data/`](data/) | Open data about South Australia, by theme, with a guide to each dataset, its source and its licence |
-| [`worked-example/`](worked-example/) | An app we built to test track 3. Learn from it, but do not submit it or copy its code |
+| [`worked-example/`](worked-example/) | An app we built to test Track 3. Learn from it, but do not submit it or copy its code |
 
 ## Download
 
