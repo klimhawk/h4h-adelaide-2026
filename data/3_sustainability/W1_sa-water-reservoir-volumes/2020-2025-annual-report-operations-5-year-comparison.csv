@@ -1,0 +1,82 @@
+﻿Location,Item,Description,2020-2021,2021-2022,2022-2023,2023-2024,2024-2025
+Statewide,Population served,Accounts billed,802580,797743,804493,811387,276549
+Statewide,Performance (%),Percentage of telephone calls within 30 seconds,91,85,78,Retired,Retired
+Statewide,Performance (%),Percentage of water connections constructed within target timeframes ,97,97,95,96,95.7
+Statewide,Performance (%),Percentage of sewer connections constructed within target timeframes,99,98,96,94,96.1
+Statewide,Performance,Number of planned water service interruptions ,433,423,471,434,377
+Statewide,Performance,Number of unplanned water service interruptions ,2730,2806,3101,"3,292","3,917"
+Statewide,Performance,Number of customers with three or more unplanned water supply interruptions per year ,"2,073",1482,1848,"2,031","3,189"
+Statewide,Performance (%),Percentage of water quality complaints responded to in target timeframes ,99,98,100,100,99.8
+Statewide,Performance (%),Percentage of water network breaks and leaks attended within target timeframes - high priority,99,99,100,100,99.7
+Statewide,Performance (%),Percentage of water network service restorations performed within target timeframes ,99,99,100,98.5,98.8
+Statewide,Performance (%),Percentage of sewerage network service restorations performed within target timeframes ,95,96,99,99,97.7
+Statewide,Performance (%),Percentage of sewerage network overflows attended within target timeframes ,100,99,100,100,100
+Statewide,Performance (%),Percentage of sewerage network overflow clean-ups performed within target timeframes ,97,97,95,98,97.7
+Metropolitan Adelaide,Water Supply,Number of water treatment plants ,7,6,6,Retired,Retired
+Metropolitan Adelaide,Water Supply and Quality Performance,Number of unplanned water service interruptions ,"1,906",2066,2243,"2,393","2,905"
+Metropolitan Adelaide,Water Supply and Quality Performance,Number of customers with three or more unplanned water supply interruptions per year ,"1,221",912,1275,"1,217","1,657"
+Metropolitan Adelaide,Water Supply and Quality Performance (%),Percentage of water network breaks and leaks attended within target timeframes ,99,99,100,100,99.9
+Metropolitan Adelaide,Water Supply and Quality Performance (%),Percentage of water network service restorations performed within target timeframes ,98,100,100,98,98.8
+Metropolitan Adelaide,Water Supply and Quality Performance (%),Percentage of water quality complaints responded to in target timeframes ,99,98,100,99,99.9
+Metropolitan Adelaide,Sewerage Services Performance,Number of planned sewerage service interruptions ,0,0,0,0,0
+Metropolitan Adelaide,Sewerage Services Performance,Number of unplanned sewerage service interruptions ,"3,844",3791,3434,"3,502","4,119"
+Metropolitan Adelaide,Sewerage Services Performance (%),Percentage of sewerage network service restorations performed within target timeframes ,95,96,99,98.4,97.7
+Metropolitan Adelaide,Sewerage Services Performance (%),Percentage of sewerage network overflows attended within target timeframes ,99,99,100,99.9,100
+Metropolitan Adelaide,Sewerage Services Performance (%),Percentage of sewerage network overflow clean-ups performed within target timeframes ,96,97,95,96.3,97.6
+Non-Metropolitan,Water Supply,Number of water treatment plants ,37,38,40,50,Retired
+Non-Metropolitan,Water Supply and Quality Performance,Number of planned water service interruptions,26,70,84,116,105
+Non-Metropolitan,Water Supply and Quality Performance,Number of unplanned water service interruptions,824,740,858,899,1012
+Non-Metropolitan,Water Supply and Quality Performance,Number of customers with three or more unplanned water supply interruptions per year,852,570,573,814,1532
+Non-Metropolitan,Water Supply and Quality Performance (%),Percentage of water quality complaints responded to in target timeframes,100,100,100,100,99.6
+Non-Metropolitan,Water Supply and Quality Performance (%),Percentage of water network breaks and leaks attended within target timeframes,99,99,100,99,99.4
+Non-Metropolitan,Water Supply and Quality Performance (%),Percentage of water network service restorations performed within target timeframes,99,99,99,99,98.8
+Non-Metropolitan,Sewerage Services Performance,Number of unplanned sewerage service interruptions,36,34,44,20,26
+Non-Metropolitan,Sewerage Services Performance (%),Percentage of sewerage network service restorations performed within target timeframes,100,99,100,100,98.7
+Non-Metropolitan,Sewerage Services Performance (%),Percentage of sewerage network overflows attended within target timeframes,100,100,99,100,100
+Non-Metropolitan,Sewerage Services Performance (%),Percentage of sewerage network overflow clean-ups performed within target timeframes,99,98,99,100,100
+Statewide,Performance (%),Percentage of water network breaks and leaks attended within target timeframes - low priority ,84,89,97,93.1,93.6
+Metropolitan Adelaide,Water Supply and Quality Performance (%),Percentage of water network breaks and leaks attended within target timeframes - low priority ,79,85,97,91,92.1
+Non-Metropolitan,Water Supply and Quality Performance (%),Percentage of water network breaks and leaks attended within target timeframes - low priority ,99,99,99,99,98.6
+Non-Metropolitan,Sewerage Services Performance,Number of planned sewerage service interruptions ,1,0,1,0,0
+Statewide,Performance,Number of planned sewerage service interruptions ,1,0,1,0,0
+Statewide,Performance,Number of unplanned sewerage service interruptions ,"3,880",3825,3478,3522,4145
+Metropolitan Adelaide,Water Supply and Quality Performance,Number of planned water service interruptions ,407,353,387,318,272
+Statewide,Water consumption (ML),Total volume delivered (ML),235502,232358,227993,255973,276549
+Statewide,Water consumption (ML),Highest daily consumption recorded in 24 hours to 8am (ML),774,789,1143.93,1167.28,1254.01
+Statewide,Water sources (ML),Total water statewide (ML),"235,502",232358,227993,255973,276549
+Statewide,Water sources (ML),Total water provided by River Murray (%),73,64,46.4,61.5,81.3
+Statewide,Water sources (ML),Total water provided by surface water (%),20,28.5,46.5,31.5,4
+Statewide,Water sources (ML),Total water provided by ground water (%),5,5.1,4.8,5,5.1
+Statewide,Water sources (ML),Total water provided by sea water (%),2.2,2.4,2.4,1.9,9.6
+Metropolitan Adelaide,Water Supply,Volume delivered (ML),"154,830",153177,149153,164779,176927
+Metropolitan Adelaide,Water Supply,Average daily volume delivered (ML),424,419.7,409,450.2,483
+Metropolitan Adelaide,Water Supply,Average volume water delivered for past 5 years,"149,621",153085.8,152424,155485,159773.1313
+Metropolitan Adelaide,Sewerage Services Performance (%),Percentage recycled water reused,34.9,28.5,21.8,28.4,36
+Non-Metropolitan,Water Supply (ML),Volume delivered ,"80,672",79181,78840,91195,99622
+Non-Metropolitan,Water Supply (ML),Average volume water delivered for past 5 years,"77,190",79808.4,80680.2,82472,85902
+Non-Metropolitan,Sewerage Services Performance (%),Percentage recycled water reused,32.7,26,21.4,25.5,26.7
+Statewide,Major Pipeline Lengths (km),Murray Bridge to Onkaparinga,50,50,50,50,50
+Statewide,Major Pipeline Lengths (km),Morgan/Whyalla no 1 via Port Augusta,358,358,358,358,358
+Statewide,Major Pipeline Lengths (km),Morgan/Whyalla no 2 undersea from Baroota,286,286,286,286,286
+Statewide,Major Pipeline Lengths (km),Mannum to Adelaide,87,87,87,87,87
+Statewide,Major Pipeline Lengths (km),Swan Reach/Paskeville,189,189,189,189,189
+Statewide,Major Pipeline Lengths (km),Tailem Bend/Keith,132,132,132,132,132
+Statewide,Major Pipeline Lengths (km),Lincoln Gap/Kimba,970,970,970,970,970
+Statewide,Major Pipeline Lengths (km),Total length of water mains across South Australia,27265,27324,27391,27515,27653
+Statewide,Major Pipeline Lengths (km),Total length of sewers across South Australia,"9,144.00",9184,9338,9413,9473
+Metropolitan Adelaide,Water Supply,Length of mains (km),9362,9382,9416,9457,9512
+Metropolitan Adelaide,Used Water,Number of wastewater treatment plants ,6,6,6,5,5
+Metropolitan Adelaide,Used Water (km),Length of sewers,"7,551",7579,7726,7792,7838
+Metropolitan Adelaide,Used Water (km),Length of recycled water supply main,350,356,359,362,364
+Non-Metropolitan,Water Supply (km),Length of mains,"17,903",17942,17975,18058,18141
+Non-Metropolitan,Used Water,Number of wastewater treatment plants,22,22,22,25,24
+Non-Metropolitan,Used Water (km),Length of sewers,1593,1606,1612,1621,1635
+Non-Metropolitan,Used Water (km),Length of recycled water supply main,83,89,89,89,89
+Statewide,Population served,Estimated population supplied water supply ,"1,775,131","1,823,107","1,834,100","1,870,222","1,895,395"
+Statewide,Population served,Estimated population supplied used water services,"1,397,209","1,429,903","1,511,313","1,540,614","1,566,740"
+Statewide,Water consumption (kL),Average residential consumption per household (kL),196,199,177,195,212
+Metropolitan Adelaide,Water Supply,"Average daily per capita consumption including commercial, industrial and residential (L)",164.6,311,309.52,343,359
+Metropolitan Adelaide,Water Supply,Estimated population served,"1,261,223","1,295,192","1,320,122","1,331,662","1,350,263"
+Metropolitan Adelaide,Used Water ,Estimated population served,1190794,"1,219,122","1,303,613","1,315,438","1,339,512"
+Non-Metropolitan,Water Supply,Estimated population served,"513,908","527,915","528,305","538,559","545,132"
+Non-Metropolitan,Used Water,Estimated population served,"206,415","210,781","207,700","225,177","227,228"
