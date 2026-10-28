@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
-<link rel="stylesheet" href="site.css?v=a03298cf6d">
+<link rel="stylesheet" href="site.css?v=27e9b44441">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -36,6 +36,7 @@
 <li><a href="data.html">Data</a></li>
 <li><a href="github.html">GitHub</a></li>
 <li><a href="gemma.html">Gemma</a></li>
+<li><a href="snowflake-setup.html">Snowflake setup</a></li>
 <li><a href="snowflake.html" aria-current="page">Snowflake</a></li>
 </ul>
 </nav>
@@ -48,36 +49,11 @@
 <p><strong>CoCo</strong> (Cortex Code) is Snowflake's AI coding agent. It runs in three places: on the web inside Snowflake, in the CoCo Desktop app, and as the Cortex CLI in a terminal.</p>
 </section>
 <section>
-<h2>1. Sign up (5 minutes)</h2>
-<p>Use the link in the email: see <a href="before-friday.html">Before Friday</a>. Confirm your email, then sign in to Snowflake on the web. No payment card is needed.</p>
+<h2>Set up first</h2>
+<p>Sign-up, the AI check and connecting CoCo on the web, in Desktop or in the Cortex CLI: <a href="snowflake-setup.html">Snowflake setup</a>.</p>
 </section>
 <section>
-<h2>2. Check it works (5 minutes)</h2>
-<ol>
-<li><p>Open a new SQL worksheet and run:</p>
-<pre><code>SELECT CURRENT_USER();</code></pre>
-<p>Note the name it returns: CoCo Desktop signs in with it, not with your email.</p></li>
-<li><p>Check Snowflake's AI is switched on for your account. In the same worksheet, run:</p>
-<pre><code>SELECT AI_COMPLETE('llama3.1-8b', 'Say hello in five words');</code></pre>
-<p>A short greeting means it is on.</p></li>
-<li>Open CoCo and ask it one short question, for example "What can you help me with?"</li>
-</ol>
-<p>If step 2 or 3 says the feature is not available for trial accounts, ask on the chapter Discord (link on <a href="index.html">Home</a>). Do not add a payment card. You can still build Tracks 1 and 2.</p>
-</section>
-<section>
-<h2>3. Pick where to use CoCo</h2>
-<ul>
-<li><strong>On the web:</strong> nothing to install. It cannot see files on your laptop.</li>
-<li><strong>CoCo Desktop</strong> (Mac with Apple silicon, Windows): download it from Snowflake and sign in with the name from section 2.</li>
-<li><p><strong>Cortex CLI</strong> (macOS, Linux, Windows with WSL), also usable from Codex or Claude Code:</p>
-<pre><code>curl -qLsS https://ai.snowflake.com/static/cc-scripts/install.sh | sh
-cortex --version</code></pre>
-<p>Open a new terminal first if <code>cortex</code> is not found. Then connect it to your event account <span class="tbc">TBC: connection steps</span>. If you have another Snowflake account, check <code>cortex connections list</code> and name the event connection on each command (<code>--connection=&lt;name&gt;</code>).</p></li>
-</ul>
-<p>To work with files in your project folder, use Desktop or the CLI.</p>
-</section>
-<section>
-<h2>4. Get a free Marketplace dataset</h2>
+<h2>1. Get a free Marketplace dataset</h2>
 <ol>
 <li>Ask CoCo to find a free Marketplace listing for your idea in your account's region. For South Australia, try Data Army Intel's free listings (SEIFA, geography, health care, education, energy and more).</li>
 <li>Open the listing and check it says <strong>Free</strong> yourself: CoCo can be wrong about this.</li>
@@ -86,11 +62,11 @@ cortex --version</code></pre>
 </ol>
 </section>
 <section>
-<h2>5. Query it</h2>
+<h2>2. Query it</h2>
 <p>Ask CoCo for the queries your app needs and run them. Keep each query in a file in your project; the rows stay out of the repo (see <a href="build.html">Build</a>). Your app reads the results; Gemma is still the AI your users see.</p>
 </section>
 <section>
-<h2>6. Save what CoCo did</h2>
+<h2>3. Save what CoCo did</h2>
 <p>At the end of a session, ask CoCo:</p>
 <blockquote>
 <p>Summarise this session for our repo: each thing we asked you, what you found or explained in one or two sentences, and the key query. Leave out account names and data rows.</p>

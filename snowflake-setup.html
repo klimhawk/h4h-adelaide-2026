@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hack for Humanity Adelaide: Snowflake setup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="site.css?v=27e9b44441">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="wrap">
+<a class="logo" href="index.html" aria-label="Hack for Humanity Adelaide, home">
+<svg viewBox="0 0 300 120" width="100%" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<polygon points="0,0 284,0 284,20 248,20 248,40 212,40 212,60 176,60 176,80 72,80 72,100 0,100" fill="#3d5f58"></polygon>
+<rect x="284" y="0" width="16" height="20" fill="#f5b726"></rect>
+<rect x="248" y="20" width="16" height="16" fill="#e97b77"></rect>
+<rect x="232" y="40" width="16" height="16" fill="#8bb2de"></rect>
+<rect x="176" y="80" width="36" height="12" fill="#f5b726"></rect>
+<rect x="140" y="80" width="36" height="12" fill="#671912"></rect>
+<rect x="16" y="100" width="56" height="12" fill="#e97b77"></rect>
+<rect x="0" y="100" width="16" height="20" fill="#671912"></rect>
+<text x="20" y="36" fill="#ffffff" font-family="'Space Mono', monospace" font-size="19" font-weight="700">HACK FOR HUMANITY</text>
+<text x="20" y="55" fill="#ffffff" font-family="'Space Mono', monospace" font-size="15">Adelaide · Oct 2026</text>
+</svg>
+</a>
+<nav class="site-nav" aria-label="Pages">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="before-friday.html">Before Friday</a></li>
+<li><a href="build.html">Build</a></li>
+<li><a href="submit.html">Submit and win</a></li>
+<li><a href="data.html">Data</a></li>
+<li><a href="github.html">GitHub</a></li>
+<li><a href="gemma.html">Gemma</a></li>
+<li><a href="snowflake-setup.html" aria-current="page">Snowflake setup</a></li>
+<li><a href="snowflake.html">Snowflake</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main" class="page wrap">
+<section class="intro">
+<h1>Snowflake setup</h1>
+<p>For Track 3 and the Snowflake challenge: create your account, check it works, and connect CoCo. Do it the evening the sign-up email arrives. The screenshots come from a test account on 28 October; your names and values will differ, and Snowflake may move a label.</p>
+</section>
+<section>
+<h2>1. Create your account (10 minutes)</h2>
+<ol>
+<li>Open the sign-up link in your email (see <a href="before-friday.html">Before Friday</a>). Enter your name and an email address you can open now: Snowflake sends an activation link there. Click <strong>Continue</strong>.<div class="shots"><a href="images/snowflake-setup/01-register.png"><img src="images/snowflake-setup/01-register.png" alt="The first sign-up form: first name, last name, work email, why you are signing up" width="435" height="529" class="shot"></a></div></li>
+<li>Enter a company name and a job title. Keep the edition, cloud and region the form shows. Read the terms; accepting them is your call. Click <strong>Get started</strong>. No payment card is needed.<div class="shots"><a href="images/snowflake-setup/03-account-options.png"><img src="images/snowflake-setup/03-account-options.png" alt="The second form: company, job title, edition, cloud provider, region and the terms box" width="435" height="640" class="shot"></a></div></li>
+<li>Snowflake asks which languages you use and what you will use it for. Answer, or click <strong>Skip</strong>.<div class="shots"><a href="images/snowflake-setup/04-languages.png"><img src="images/snowflake-setup/04-languages.png" alt="The question about languages" width="435" height="506" class="shot"></a><a href="images/snowflake-setup/05-use-case.png"><img src="images/snowflake-setup/05-use-case.png" alt="The question about what you will use Snowflake for" width="435" height="506" class="shot"></a></div></li>
+<li>Open the activation email (it can take a few minutes) and click its link. If the page does not load, try another browser.<div class="shots"><a href="images/snowflake-setup/06-check-inbox.png"><img src="images/snowflake-setup/06-check-inbox.png" alt="Check your inbox: an activation email has been sent" width="435" height="378" class="shot"></a></div></li>
+<li>Choose a username and a password, then click <strong>Get started</strong>. Snowflake opens on <strong>Home</strong>.<div class="shots"><a href="images/snowflake-setup/07-username-password.png"><img src="images/snowflake-setup/07-username-password.png" alt="Welcome to Snowflake: username, password and confirm password" width="402" height="615" class="shot"></a><a href="images/snowflake-setup/09-snowsight-home.png"><img src="images/snowflake-setup/09-snowsight-home.png" alt="Snowflake Home after signing in, with the menu on the left" width="1198" height="971" class="shot"></a></div></li>
+</ol>
+</section>
+<section>
+<h2>2. Check the AI is on (5 minutes)</h2>
+<p>Open a new SQL worksheet and run:</p>
+<pre><code>SELECT AI_COMPLETE('llama3.1-8b', 'Say hello in five words');</code></pre>
+<p>A short greeting means it is on. If it says the feature is not available for trial accounts, ask on the chapter Discord (link on <a href="index.html">Home</a>). Do not add a payment card. You can still build Tracks 1 and 2.</p>
+</section>
+<section>
+<h2>3. Find your connection details</h2>
+<ol>
+<li>Click your name at the bottom left, then <strong>Account</strong>, then <strong>View Account Details</strong>.<div class="shots"><a href="images/snowflake-setup/12-account-menu.png"><img src="images/snowflake-setup/12-account-menu.png" alt="The account menu at the bottom left" width="272" height="592" class="shot"></a><a href="images/snowflake-setup/13-account-selector.png"><img src="images/snowflake-setup/13-account-selector.png" alt="The Account row opened, with View Account Details" width="596" height="593" class="shot"></a></div></li>
+<li>The <strong>Account</strong> tab lists <strong>Account identifier</strong> and <strong>Login name</strong>, each with a copy button. You need both to connect CoCo. Use Account identifier (with a hyphen), not Data sharing account identifier (with a dot).<div class="shots"><a href="images/snowflake-setup/14-account-details.png"><img src="images/snowflake-setup/14-account-details.png" alt="Account Details, Account tab: the field names, with every account value blacked out" width="884" height="630" class="shot"></a></div></li>
+</ol>
+</section>
+<section>
+<h2>4. Pick where to use CoCo</h2>
+<ul>
+<li><strong>On the web:</strong> nothing to install. It cannot see files on your laptop.</li>
+<li><strong>CoCo Desktop</strong> (Mac with Apple silicon, Windows): download it from Snowflake. In <strong>Sign in to Snowflake</strong>, paste Account identifier into <strong>Account Identifier</strong> and Login name into <strong>Username</strong>. Method: <strong>Local OAuth</strong>. Click <strong>Sign In</strong>, then sign in on the page that opens in your browser. Back in Desktop, your new connection shows at the top left.<div class="shots"><a href="images/snowflake-setup/15-desktop-sign-in.png"><img src="images/snowflake-setup/15-desktop-sign-in.png" alt="CoCo Desktop, Sign in to Snowflake: Account Identifier, Connection Name, Username, Local OAuth" width="578" height="824" class="shot"></a><a href="images/snowflake-setup/16-browser-sign-in.png"><img src="images/snowflake-setup/16-browser-sign-in.png" alt="The browser sign-in page: username and password" width="406" height="496" class="shot"></a></div></li>
+<li><strong>Cortex CLI</strong> (macOS, Linux, Windows with WSL), also usable from Codex or Claude Code:<pre><code>curl -qLsS https://ai.snowflake.com/static/cc-scripts/install.sh | sh
+cortex --version</code></pre><p>Open a new terminal first if <code>cortex</code> is not found. Then connect it: section 5.</p></li>
+</ul>
+<p>To work with files in your project folder, use Desktop or the CLI.</p>
+</section>
+<section>
+<h2>5. Connect the Cortex CLI</h2>
+<p>Connect Desktop first (section 4); in our test the CLI then listed the same connection. Without Desktop, press <strong>a</strong> to add one with the same Account identifier and Login name. We have not tested that path.</p>
+<ol>
+<li>Start <code>cortex</code> in your project folder. If it asks whether to trust the folder, read it first. Type <code>/connections</code>.<div class="shots"><a href="images/snowflake-setup/21-cli-connections.png"><img src="images/snowflake-setup/21-cli-connections.png" alt="The connections list: one connection highlighted, other saved connections omitted, and the keys at the bottom" width="1028" height="192" class="shot"></a></div></li>
+<li>Use the arrow keys to highlight your event connection and press <strong>s</strong>. Then press <strong>a</strong> to use it in all future sessions, or <strong>s</strong> for this session only. If a browser page opens, sign in there.<div class="shots"><a href="images/snowflake-setup/22-cli-set-active.png"><img src="images/snowflake-setup/22-cli-set-active.png" alt="Set Active Connection: this session only, or all future sessions" width="1028" height="364" class="shot"></a></div></li>
+<li>Press <strong>Escape</strong>. On the main screen, Agent Connection and SQL Connection should both show your event account.</li>
+</ol>
+</section>
+<section>
+<h2>6. Check CoCo can answer and query</h2>
+<p>Paste this into CoCo (we tested it in the CLI):</p>
+<pre><code>Check my current Snowflake connection using read-only queries.
+
+Show the current account, user, role and warehouse.
+List available warehouses. If none is selected, use an existing
+X-Small warehouse for this session only. Do not create or resize one.
+
+Then run SELECT 1 AS connection_ok.
+
+Do not change data, permissions or persistent settings.</code></pre>
+<p>Look for <strong>CONNECTION_OK</strong> with the value <strong>1</strong>. This shows CoCo can answer and run a query; it does not show how much AI use your account has left.</p>
+<div class="shots"><a href="images/snowflake-setup/26-cli-check-prompt.png"><img src="images/snowflake-setup/26-cli-check-prompt.png" alt="CoCo runs the read-only queries: account, user, role and warehouse, then the warehouse list" width="995" height="700" class="shot"></a><a href="images/snowflake-setup/27-cli-check-result.png"><img src="images/snowflake-setup/27-cli-check-result.png" alt="The result: CONNECTION_OK is 1, and the session&#x27;s role and warehouse" width="995" height="788" class="shot"></a></div>
+<p>Tested with Cortex Code CLI 1.2.24. Next, get a Marketplace dataset: <a href="snowflake.html">Snowflake how-to</a>.</p>
+</section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<span>A Hacktoberfest Hack Day, hosted by AI Collective Adelaide</span>
+<a href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md" target="_blank" rel="noopener">MLH Code of Conduct</a>
+</div>
+</footer>
+</body>
+</html>
