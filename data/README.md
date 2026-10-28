@@ -279,6 +279,7 @@ LGA. Filter to SA. *CC BY.*
 
 ## Using the data in Snowflake
 
+Set up your Snowflake account and CoCo first: [Snowflake setup](https://klimhawk.github.io/h4h-adelaide-2026/snowflake-setup.html).
 Every table here is CSV or XLSX (maps are GeoJSON or shapefiles). To get a CSV into Snowflake,
 ask CoCo to load it, for example: "Load data/[file].csv into a new table. Keep postcodes as text."
 
